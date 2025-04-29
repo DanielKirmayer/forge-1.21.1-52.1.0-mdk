@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class ModArmorMaterials {
-    public static final Holder<ArmorMaterial> CRYONITE_ARMOR_MATERIAL = register("alexandrite", Util.make(new EnumMap<>(ArmorItem.Type.class),
+    public static final Holder<ArmorMaterial> CRYONITE_ARMOR_MATERIAL = register("cryonite", Util.make(new EnumMap<>(ArmorItem.Type.class),
             attribute -> {
                 attribute.put(ArmorItem.Type.BOOTS, 5);
                 attribute.put(ArmorItem.Type.LEGGINGS, 7);

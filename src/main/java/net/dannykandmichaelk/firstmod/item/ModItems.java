@@ -33,7 +33,7 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem. Type.CHESTPLATE.getDurability(18))));
     public static final RegistryObject<Item> CRYONITE_LEGGINGS = ITEMS.register("cryonite_leggings",
-            () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.CHESTPLATE,
+            () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem. Type.CHESTPLATE.getDurability(18))));
     public static final RegistryObject<Item> CRYONITE_BOOTS = ITEMS.register("cryonite_boots",
             () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.BOOTS,
