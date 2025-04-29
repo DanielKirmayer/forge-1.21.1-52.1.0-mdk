@@ -3,6 +3,7 @@ package net.dannykandmichaelk.firstmod.item;
 import net.dannykandmichaelk.firstmod.FirstMod;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.item.custom.ChiselItem;
+import net.dannykandmichaelk.firstmod.item.custom.ModArmorItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -30,7 +31,7 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem. Type.HELMET.getDurability(18))));
     public static final RegistryObject<Item> CRYONITE_CHESTPLATE = ITEMS.register("cryonite_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.CHESTPLATE,
+            () -> new ModArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem. Type.CHESTPLATE.getDurability(18))));
     public static final RegistryObject<Item> CRYONITE_LEGGINGS = ITEMS.register("cryonite_leggings",
             () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.LEGGINGS,
