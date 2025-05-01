@@ -3,10 +3,12 @@ package net.dannykandmichaelk.firstmod.entity.custom;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.Mth;
 import net.minecraft.util.TimeUtil;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.damagesource.DamageSource;
@@ -19,21 +21,33 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
+import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.monster.ZombifiedPiglin;
+import net.minecraft.world.entity.animal.allay.Allay;
+import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.EvokerFangs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.scores.PlayerTeam;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
+import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
 
-public class MrDasEntity extends Animal implements  NeutralMob {
+import static net.dannykandmichaelk.firstmod.entity.ModEntities.*;
+
+public class MrDasEntity extends Evoker implements  NeutralMob {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+    public final AnimationState attackAnimationState = new AnimationState();
     private int remainingPersistentAngerTime;
     private UUID persistentAngerTarget;
     private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
@@ -46,42 +60,48 @@ public class MrDasEntity extends Animal implements  NeutralMob {
 
 
 
-    public MrDasEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+
+    public MrDasEntity(EntityType<? extends Evoker> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(0,new FloatGoal(this));
+//        this.goalSelector.addGoal(0,new FloatGoal(this));
 
 
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers());
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 4, true));
+        this.goalSelector.addGoal(0, new MeleeAttackGoal(this, 3, true));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, 1, false, true, this::isAngryAt));
+//        this.targetSelector.addGoal(1, new SpellcasterCastingSpellGoal());
+        this.goalSelector.addGoal(0, new FloatGoal(this));
+        this.goalSelector.addGoal(1, new MrDasSummonEntityGoal());
 
-        this.goalSelector.addGoal(2, new BreedGoal(this, 1.0));
+
         this.goalSelector.addGoal(3, new TemptGoal(this, 1.125, stack -> stack.is(ModItems.TRUMPIUM.get()), false));
 
-        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.25));
+
 
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
+//        super.registerGoals();
 
     }
 
 
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 10.0)
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 30.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.25F)
                 .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE, 150.0F)
-                .add(Attributes.ATTACK_DAMAGE,1)
-                .add(Attributes.ATTACK_SPEED,1000)
+                .add(Attributes.ATTACK_DAMAGE,3)
+                .add(Attributes.ATTACK_SPEED,10F)
                 .add(Attributes.ATTACK_KNOCKBACK,10)
                 .add(Attributes.FALL_DAMAGE_MULTIPLIER,0)
-                .add(Attributes.STEP_HEIGHT, 1.0)
-                .add(Attributes.FOLLOW_RANGE,1000);
+                .add(Attributes.STEP_HEIGHT, 4.0)
+                .add(Attributes.FOLLOW_RANGE,1000)
+                .add(Attributes.SCALE, 1.5F);
     }
 
     @Override
@@ -100,21 +120,67 @@ public class MrDasEntity extends Animal implements  NeutralMob {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.WITHER_HURT;
+        return SoundEvents.BONE_BLOCK_BREAK;
+    }
+
+    class MrDasSummonEntityGoal extends SpellcasterIllager.SpellcasterUseSpellGoal {
+        private final TargetingConditions vexCountTargeting = TargetingConditions.forNonCombat().range(16.0).ignoreLineOfSight().ignoreInvisibilityTesting();
+
+        @Override
+        public boolean canUse() {
+            if (!super.canUse()) {
+                return false;
+            } else {
+                int i = MrDasEntity.this.level().getNearbyEntities(Vex.class, this.vexCountTargeting, MrDasEntity.this, MrDasEntity.this.getBoundingBox().inflate(16.0)).size();
+                return MrDasEntity.this.random.nextInt(8) + 1 > i;
+            }
+        }
+
+        @Override
+        protected int getCastingTime() {
+            return 100;
+        }
+
+        @Override
+        protected int getCastingInterval() {
+            return 340;
+        }
+
+        @Override
+        protected void performSpellCasting() {
+            ServerLevel serverlevel = (ServerLevel)MrDasEntity.this.level();
+            PlayerTeam playerteam = MrDasEntity.this.getTeam();
+
+            for (int i = 0; i < 3; i++) {
+                BlockPos blockpos = MrDasEntity.this.blockPosition().offset(-2 + MrDasEntity.this.random.nextInt(5), 1, -2 + MrDasEntity.this.random.nextInt(5));
+               WerewolfEntity Werewolf = EntityType.Builder.of(WerewolfEntity::new, MobCategory.CREATURE).sized(1.5f, 5f).build("werewolf2").create(MrDasEntity.this.level());
+
+                if (Werewolf != null) {
+                    Werewolf.moveTo(blockpos, 0.0F, 0.0F);
+                    Werewolf.finalizeSpawn(serverlevel, MrDasEntity.this.level().getCurrentDifficultyAt(blockpos), MobSpawnType.MOB_SUMMONED, null);
+                    if (playerteam != null) {
+                        serverlevel.getScoreboard().addPlayerToTeam(Werewolf.getScoreboardName(), playerteam);
+                    }
+
+                    serverlevel.addFreshEntityWithPassengers(Werewolf);
+                    serverlevel.gameEvent(GameEvent.ENTITY_PLACE, blockpos, GameEvent.Context.of(MrDasEntity.this));
+                }
+            }
+        }
+
+        @Override
+        protected SoundEvent getSpellPrepareSound() {
+            return SoundEvents.EVOKER_PREPARE_SUMMON;
+        }
+
+        @Override
+        protected SpellcasterIllager.IllagerSpell getSpell() {
+            return IllagerSpell.BLINDNESS;
+        }
     }
 
 
 
-    @Override
-    public boolean isFood(ItemStack pStack) {
-        return pStack.is(ModItems.TRUMPIUM.get());
-    }
-
-    @Nullable
-    @Override
-    public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-       return ModEntities.MRDAS.get().create(pLevel);
-    }
 
     private void setupAnimationStates() {
         if (this.idleAnimationTimeout <= 0) {
@@ -127,15 +193,7 @@ public class MrDasEntity extends Animal implements  NeutralMob {
     }
 
 
-    @Override
-    public void tick() {
-        super.tick();
 
-        if(this.level().isClientSide())
-        {
-            this.setupAnimationStates();
-        }
-    }
 
     @Override
     public int getRemainingPersistentAngerTime() {
@@ -196,6 +254,13 @@ public class MrDasEntity extends Animal implements  NeutralMob {
 
         super.setTarget(pLivingEntity);
     }
+    public void tick() {
+        super.tick();
+
+        if(this.level().isClientSide()) {
+            this.setupAnimationStates();
+        }
+    }
 
     protected void customServerAiStep() {
 
@@ -209,6 +274,7 @@ public class MrDasEntity extends Animal implements  NeutralMob {
 
         if (this.isAngry()) {
             this.lastHurtByPlayerTime = this.tickCount;
+            this.attackAnimationState.startIfStopped(this.tickCount);
         }
 
         super.customServerAiStep();

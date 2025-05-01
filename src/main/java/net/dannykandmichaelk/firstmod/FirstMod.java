@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.entity.client.MrDasRenderer;
+import net.dannykandmichaelk.firstmod.entity.client.WerewolfRenderer;
 import net.dannykandmichaelk.firstmod.item.ModCreativeModeTabs;
 import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -84,6 +85,7 @@ public class FirstMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.MRDAS.get(), MrDasRenderer::new);
+            EntityRenderers.register(ModEntities.WEREWOLF.get(), WerewolfRenderer::new);
 
         }
     }
