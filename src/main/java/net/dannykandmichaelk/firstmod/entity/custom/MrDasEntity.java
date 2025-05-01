@@ -27,6 +27,7 @@ import net.minecraft.world.entity.animal.allay.Allay;
 import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.EvokerFangs;
+import net.minecraft.world.entity.projectile.WitherSkull;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -153,7 +154,8 @@ public class MrDasEntity extends Evoker implements  NeutralMob {
 
             for (int i = 0; i < 3; i++) {
                 BlockPos blockpos = MrDasEntity.this.blockPosition().offset(-2 + MrDasEntity.this.random.nextInt(5), 1, -2 + MrDasEntity.this.random.nextInt(5));
-               WerewolfEntity Werewolf = EntityType.Builder.of(WerewolfEntity::new, MobCategory.CREATURE).sized(1.5f, 5f).build("werewolf2").create(MrDasEntity.this.level());
+           WerewolfEntity Werewolf = WEREWOLF.get().create(MrDasEntity.this.level());
+
 
                 if (Werewolf != null) {
                     Werewolf.moveTo(blockpos, 0.0F, 0.0F);
