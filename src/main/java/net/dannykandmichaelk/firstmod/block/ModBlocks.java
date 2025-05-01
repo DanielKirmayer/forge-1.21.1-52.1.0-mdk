@@ -23,7 +23,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RAW_CRYONITE_BLOCK = registerBlock("raw_cryonite_block", () ->
             new Block(BlockBehaviour.Properties.of().strength(4.5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.9f)));
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.2f)));
 
 
 
