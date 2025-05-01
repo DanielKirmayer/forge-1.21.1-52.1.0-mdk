@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "firstmod:cryonite"
+    }
+  },
+  "pattern" : [
+    "A A",
+    "AAA",
+    "AAA"
+  ],
+
+  "result": {
+    "count" : 1,
+    "id" : "firstmod:cryonite_chestplate"
+  }
+}
