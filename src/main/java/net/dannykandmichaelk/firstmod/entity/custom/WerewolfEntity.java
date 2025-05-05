@@ -66,12 +66,21 @@ public class WerewolfEntity extends Camel {
                 .add(Attributes.ATTACK_DAMAGE, 300);
     }
 
-
+    @Override
+    public void sitDown() {
+        if (!this.isCamelSitting()) {
+            this.makeSound(SoundEvents.CAMEL_SIT);
+            this.setPose(Pose.SITTING);
+            this.gameEvent(GameEvent.ENTITY_ACTION);
+            this.resetLastPoseChangeTick(-this.level().getGameTime());
+        }
+    }
 
     @Override
     public EntityDimensions getDefaultDimensions(Pose pPose) {
         return pPose == Pose.SITTING ? SITTING_DIMENSIONS.scale(this.getAgeScale()) : super.getDefaultDimensions(pPose);
     }
+
 
 
 
@@ -87,10 +96,6 @@ public class WerewolfEntity extends Camel {
 
 
         this.sitAnimationState.startIfStopped(this.tickCount);
-        this.sitPoseAnimationState.stop();
-        this.sitAnimationState.stop();
-        this.idleAnimationState.start(100);
-        this.idleAnimationState.stop();
     }
 
     @Override

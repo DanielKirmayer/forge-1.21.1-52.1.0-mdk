@@ -693,7 +693,7 @@ public class WerewolfModel<T extends WerewolfEntity> extends HierarchicalModel<T
 
         this.animateWalk(WerewolfAnimations.walk, limbSwing, limbSwingAmount, 2f, 2.5f);
         this.animate(entity.idleAnimationState, WerewolfAnimations.idle, ageInTicks, 1f);
-        this.animate(entity.sitAnimationState, WerewolfAnimations.idle_to_wolf, ageInTicks, 1f);
+//        this.animate(entity.sitAnimationState, WerewolfAnimations.idle_to_wolf, ageInTicks, 1f);
         this.animate(entity.sitAnimationState, WerewolfAnimations.idle_wolf, ageInTicks, 1f);
     }
 
