@@ -90,6 +90,7 @@ public class WerewolfEntity extends Camel {
         this.sitPoseAnimationState.stop();
         this.sitAnimationState.stop();
         this.idleAnimationState.start(100);
+        this.idleAnimationState.stop();
     }
 
     @Override
