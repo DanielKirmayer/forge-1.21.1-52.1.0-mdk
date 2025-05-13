@@ -36,7 +36,7 @@ public class WerewolfModel<T extends WerewolfEntity> extends HierarchicalModel<T
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition root = partdefinition.addOrReplaceChild("root", CubeListBuilder.create(), PartPose.offset(0.0F, 0F, 0.0F));
+        PartDefinition root = partdefinition.addOrReplaceChild("root", CubeListBuilder.create(), PartPose.offset(0.0F, -20F, 0.0F));
 
         PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(72, 36).addBox(-3.0F, -8.0F, -4.0F, 7.0F, 5.0F, 8.0F, new CubeDeformation(-0.01F))
                 .texOffs(47, 82).addBox(-1.9675F, -3.142F, -4.02F, 6.0F, 3.5F, 8.0F, new CubeDeformation(-0.02F))
@@ -693,8 +693,9 @@ public class WerewolfModel<T extends WerewolfEntity> extends HierarchicalModel<T
 
         this.animateWalk(WerewolfAnimations.walk, limbSwing, limbSwingAmount, 2f, 2.5f);
         this.animate(entity.idleAnimationState, WerewolfAnimations.idle, ageInTicks, 1f);
-//        this.animate(entity.sitAnimationState, WerewolfAnimations.idle_to_wolf, ageInTicks, 1f);
-        this.animate(entity.sitAnimationState, WerewolfAnimations.idle_wolf, ageInTicks, 1f);
+        this.animate(entity.sitAnimationState, WerewolfAnimations.idle_to_wolf, ageInTicks, 1f);
+        this.animate(entity.sitPoseAnimationState, WerewolfAnimations.idle_wolf, ageInTicks, 1f);
+//        this.animate(entity.sitAnimationState, WerewolfAnimations.idle_wolf, ageInTicks, 1f);
     }
 
     private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch) {

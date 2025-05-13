@@ -28,7 +28,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.Nullable;
-
+import org.spongepowered.asm.mixin.injection.At;
 
 
 public class WerewolfEntity extends Camel {
@@ -63,28 +63,33 @@ public class WerewolfEntity extends Camel {
                 .add(Attributes.MAX_HEALTH, 30D)
                 .add(Attributes.MOVEMENT_SPEED, 0.35D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
-                .add(Attributes.ATTACK_DAMAGE, 300);
+                .add(Attributes.ATTACK_DAMAGE, 300)
+                .add(Attributes.STEP_HEIGHT, 3)
+                .add(Attributes.JUMP_STRENGTH, 21);
     }
 
-    @Override
+
     public void sitDown() {
         if (!this.isCamelSitting()) {
             this.makeSound(SoundEvents.CAMEL_SIT);
-            this.setPose(Pose.SITTING);
+            this.setPose(Pose.CROAKING);
             this.gameEvent(GameEvent.ENTITY_ACTION);
             this.resetLastPoseChangeTick(-this.level().getGameTime());
         }
     }
 
+//    @Override
+//    public EntityDimensions getDefaultDimensions(Pose pPose) {
+//        return pPose == Pose.SITTING ? SITTING_DIMENSIONS.scale(this.getAgeScale()) : super.getDefaultDimensions(pPose);
+//    }
+
+
     @Override
-    public EntityDimensions getDefaultDimensions(Pose pPose) {
-        return pPose == Pose.SITTING ? SITTING_DIMENSIONS.scale(this.getAgeScale()) : super.getDefaultDimensions(pPose);
+    protected void addPassenger(Entity pPassenger) {
+        super.addPassenger(pPassenger);
+        this.sitPoseAnimationState.start(tickCount);
+        this.sitAnimationState.start(tickCount);
     }
-
-
-
-
-
 
     private void setupAnimationStates() {
         if (this.idleAnimationTimeout <= 0) {
@@ -95,7 +100,8 @@ public class WerewolfEntity extends Camel {
         }
 
 
-        this.sitAnimationState.startIfStopped(this.tickCount);
+//        this.sitAnimationState.start(tickCount);
+//        this.sitPoseAnimationState.start(tickCount);
     }
 
     @Override
