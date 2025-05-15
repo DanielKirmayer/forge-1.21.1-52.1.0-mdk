@@ -760,9 +760,6 @@ public class WerewolfAnimations {
 
 
         public static final AnimationDefinition idle_to_wolf = AnimationDefinition.Builder.withLength(0.4167F)
-                .addAnimation("root", new AnimationChannel(AnimationChannel.Targets.POSITION,
-                        new Keyframe(0.4167F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
-                ))
                 .addAnimation("body", new AnimationChannel(AnimationChannel.Targets.ROTATION,
                         new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
                         new Keyframe(0.001F, KeyframeAnimations.degreeVec(-90.0F, 0.0F, -90.0F), AnimationChannel.Interpolations.LINEAR),

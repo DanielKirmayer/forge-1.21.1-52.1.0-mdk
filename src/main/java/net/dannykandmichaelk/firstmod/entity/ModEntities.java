@@ -16,10 +16,12 @@ public class ModEntities {
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, FirstMod.MOD_ID);
 
     public static final RegistryObject<EntityType<MrDasEntity>> MRDAS =
-            ENTITY_TYPES.register("mrdas", () -> EntityType.Builder.of(MrDasEntity::new, MobCategory.CREATURE).sized(1.5f,1.5f).build("mrdas"));
+            ENTITY_TYPES.register("mrdas", () -> EntityType.Builder.of(MrDasEntity::new, MobCategory.CREATURE).sized(1.5f,4f).build("mrdas"));
+
 
     public static final RegistryObject<EntityType<WerewolfEntity>> WEREWOLF =
             ENTITY_TYPES.register("werewolf", () -> EntityType.Builder.of(WerewolfEntity::new, MobCategory.CREATURE).sized(1.5f,4f).build("werewolf"));
+
 
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
