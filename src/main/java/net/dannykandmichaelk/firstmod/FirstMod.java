@@ -8,6 +8,7 @@ import net.dannykandmichaelk.firstmod.entity.client.WerewolfRenderer;
 import net.dannykandmichaelk.firstmod.item.ModCreativeModeTabs;
 import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.entity.ai.behavior.WorkAtComposter;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;

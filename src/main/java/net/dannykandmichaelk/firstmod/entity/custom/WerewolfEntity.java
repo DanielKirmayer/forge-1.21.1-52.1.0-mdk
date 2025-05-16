@@ -63,7 +63,7 @@ public class WerewolfEntity extends Camel {
                 .add(Attributes.MAX_HEALTH, 30D)
                 .add(Attributes.MOVEMENT_SPEED, 0.35D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
-                .add(Attributes.ATTACK_DAMAGE, 300)
+                .add(Attributes.ATTACK_DAMAGE, 6)
                 .add(Attributes.STEP_HEIGHT, 3)
                 .add(Attributes.JUMP_STRENGTH, 21)
                 .add(Attributes.SCALE, 0.2F);
