@@ -17,7 +17,7 @@ public class MrDasRenderer extends MobRenderer<MrDasEntity, MrDasModel<MrDasEnti
 
     @Override
     public ResourceLocation getTextureLocation(MrDasEntity pEntity) {
-        return ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "textures/entity/mrdas/triceratops_gray.png");
+        return ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "textures/entity/mrdas/mrdascube.png");
     }
 
     @Override

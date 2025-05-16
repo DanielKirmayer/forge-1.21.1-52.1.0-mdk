@@ -23,74 +23,54 @@ public class MrDasModel<T extends MrDasEntity> extends HierarchicalModel<T> {
 
         // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
         public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "mrdas"), "main");
-        private final ModelPart body;
-        private final ModelPart head;
+        private final ModelPart root;
 
 
         public MrDasModel(ModelPart root) {
-            this.body = root.getChild("body");
-            this.head = body.getChild("upper").getChild("neck").getChild("head");
+            this.root = root.getChild("root");
 
         }
 
-    private static String getSegmentName(int pIndex) {
-        return "cube" + pIndex;
-    }
 
-    public static LayerDefinition createBodyLayer() {
+
+
+    public static LayerDefinition createOuterBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
+//        partdefinition.addOrReplaceChild("root", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, 16.0F, -4.0F, 8.0F, 8.0F, 8.0F), PartPose.ZERO);
 
-        for (int i = 0; i < 8; i++) {
-            int j = 0;
-            int k = i;
-            if (i == 2) {
-                j = 24;
-                k = 10;
-            } else if (i == 3) {
-                j = 24;
-                k = 19;
-            }
+        PartDefinition root = partdefinition.addOrReplaceChild("root", CubeListBuilder.create().texOffs(0, 0).addBox(-8.0F, -8.0F, -8.0F, 16.0F, 16.0F, 16.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 16.0F, 0.0F, 0F, 45F, 0F));
 
-            partdefinition.addOrReplaceChild(
-                    getSegmentName(i), CubeListBuilder.create().texOffs(j, k).addBox(-4.0F, (float)(16 + i), -4.0F, 8.0F, 1.0F, 8.0F), PartPose.ZERO
-            );
-        }
-
-        partdefinition.addOrReplaceChild(
-                "inside_cube", CubeListBuilder.create().texOffs(0, 16).addBox(-2.0F, 18.0F, -2.0F, 4.0F, 4.0F, 4.0F), PartPose.ZERO
-        );
-        return LayerDefinition.create(meshdefinition, 64, 32);
+//        PartDefinition cube_r1 = root.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-16.0F, -15.0F, -9.0F, 16.0F, 16.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-15.0F, -9.0F, 0.0F, 1.5708F, 3.1416F, 0.0F));
+//
+//        PartDefinition cube_r2 = root.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(0, 0).addBox(-16.0F, -15.0F, -9.0F, 16.0F, 16.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-15.0F, -7.0F, 14.0F, -1.5708F, 3.1416F, 0.0F));
+//
+//        PartDefinition cube_r3 = root.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(0, 0).addBox(-16.0F, -15.0F, -9.0F, 16.0F, 16.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-15.0F, -1.0F, 6.0F, 0.0F, 3.1416F, 0.0F));
+//
+//        PartDefinition cube_r4 = root.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(0, 0).addBox(-16.0F, -15.0F, -9.0F, 16.0F, 16.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-6.0F, -1.0F, -1.0F, 0.0F, 1.5708F, 0.0F));
+//
+//        PartDefinition cube_r5 = root.addOrReplaceChild("cube_r5", CubeListBuilder.create().texOffs(0, 0).addBox(-16.0F, -15.0F, -9.0F, 16.0F, 16.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-8.0F, -1.0F, 15.0F, 0.0F, -1.5708F, 0.0F));
+        return LayerDefinition.create(meshdefinition, 16, 16);
     }
+
+
 
 
 
         @Override
         public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int color) {
-            body.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
+            root.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
         }
 
-    private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch) {
-        pNetHeadYaw = Mth.clamp(pNetHeadYaw, -30.0F, 30.0F);
-        pHeadPitch = Mth.clamp(pHeadPitch, -25.0F, 45.0F);
 
-        this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180F);
-        this.head.xRot = pHeadPitch * ((float)Math.PI / 180F);
-    }
-
-    @Override
-    public void setupAnim(MrDasEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.root().getAllParts().forEach(ModelPart::resetPose);
-        this.applyHeadRotation(netHeadYaw, headPitch);
-
-        this.animateWalk(MrDasAnimations.TRIKE_WALKING, limbSwing, limbSwingAmount, 2f, 2.5f);
-        this.animate(entity.idleAnimationState, MrDasAnimations.TRIKE_IDLE, ageInTicks, 1f);
-    }
 
     @Override
     public ModelPart root() {
-        return body;
+        return root;
     }
 
 
+    @Override
+    public void setupAnim(T pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
+    }
 }
