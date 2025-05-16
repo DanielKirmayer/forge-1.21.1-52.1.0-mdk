@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.Mod;
     public class ModEventBusEvents {
         @SubscribeEvent
         public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-            event.registerLayerDefinition(MrDasModel.LAYER_LOCATION, MrDasModel::createBodyLayer);
+            event.registerLayerDefinition(MrDasModel.LAYER_LOCATION, MrDasModel::createOuterBodyLayer);
             event.registerLayerDefinition(WerewolfModel.LAYER_LOCATION, WerewolfModel::createBodyLayer);
         }
 
