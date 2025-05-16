@@ -100,9 +100,9 @@ public class MrDasEntity extends Evoker implements  NeutralMob {
                 .add(Attributes.ATTACK_SPEED,10F)
                 .add(Attributes.ATTACK_KNOCKBACK,10)
                 .add(Attributes.FALL_DAMAGE_MULTIPLIER,0)
-                .add(Attributes.STEP_HEIGHT, 4.0)
+                .add(Attributes.STEP_HEIGHT, 2.0)
                 .add(Attributes.FOLLOW_RANGE,1000)
-                .add(Attributes.SCALE, 1.5F);
+                .add(Attributes.SCALE, 5F);
     }
 
     @Override
@@ -123,6 +123,9 @@ public class MrDasEntity extends Evoker implements  NeutralMob {
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
         return SoundEvents.BONE_BLOCK_BREAK;
     }
+
+
+
 
     class MrDasSummonEntityGoal extends SpellcasterIllager.SpellcasterUseSpellGoal {
         private final TargetingConditions vexCountTargeting = TargetingConditions.forNonCombat().range(16.0).ignoreLineOfSight().ignoreInvisibilityTesting();
@@ -152,7 +155,7 @@ public class MrDasEntity extends Evoker implements  NeutralMob {
             ServerLevel serverlevel = (ServerLevel)MrDasEntity.this.level();
             PlayerTeam playerteam = MrDasEntity.this.getTeam();
 
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 2; i++) {
                 BlockPos blockpos = MrDasEntity.this.blockPosition().offset(-2 + MrDasEntity.this.random.nextInt(5), 1, -2 + MrDasEntity.this.random.nextInt(5));
            WerewolfEntity Werewolf = WEREWOLF.get().create(MrDasEntity.this.level());
 
