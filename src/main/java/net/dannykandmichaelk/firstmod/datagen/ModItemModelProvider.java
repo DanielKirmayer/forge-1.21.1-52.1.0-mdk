@@ -19,6 +19,19 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         withExistingParent(ModItems.MRDAS_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        basicItem(ModItems.CRYONITE.get());
+        basicItem(ModItems.RAW_CRYONITE.get());
+
+        basicItem(ModItems.SUPER_CHISEL.get());
+        basicItem(ModItems.TRUMPIUM.get());
+
+
+        basicItem(ModItems.CRYONITE_HELMET.get());
+        basicItem(ModItems.CRYONITE_CHESTPLATE.get());
+        basicItem(ModItems.CRYONITE_LEGGINGS.get());
+        basicItem(ModItems.CRYONITE_BOOTS.get());
+
+
 
     }
 
