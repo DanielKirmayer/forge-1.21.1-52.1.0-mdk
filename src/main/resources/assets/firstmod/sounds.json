@@ -1,0 +1,62 @@
+{
+  "das_hit_1": {
+    "subtitle": "sounds.firstmod.das_hit_1",
+    "sounds": [
+      "firstmod:das_hit_1"
+    ]
+  },
+  "das_hit_2": {
+    "subtitle": "sounds.firstmod.das_hit_2",
+    "sounds": [
+      "firstmod:das_hit_2"
+    ]
+  },
+  "das_hit_3": {
+    "subtitle": "sounds.firstmod.das_hit_3",
+    "sounds": [
+      "firstmod:das_hit_3"
+    ]
+  },
+  "das_hit_4": {
+    "subtitle": "sounds.firstmod.das_hit_4",
+    "sounds": [
+      "firstmod:das_hit_4"
+    ]
+  },
+  "das_hit_5": {
+    "subtitle": "sounds.firstmod.das_hit_5",
+    "sounds": [
+      "firstmod:das_hit_5"
+    ]
+  },
+  "das_hit_6": {
+    "subtitle": "sounds.firstmod.das_hit_6",
+    "sounds": [
+      "firstmod:das_hit_6"
+    ]
+  },
+  "das_hit_7": {
+    "subtitle": "sounds.firstmod.das_hit_7",
+    "sounds": [
+      "firstmod:das_hit_7"
+    ]
+  },
+  "das_hit_8": {
+    "subtitle": "sounds.firstmod.das_hit_8",
+    "sounds": [
+      "firstmod:das_hit_8"
+    ]
+  },
+  "das_hit_9": {
+    "subtitle": "sounds.firstmod.das_hit_9",
+    "sounds": [
+      "firstmod:das_hit_9"
+    ]
+  },
+  "das_hit_10": {
+    "subtitle": "sounds.firstmod.das_hit_10",
+    "sounds": [
+      "firstmod:das_hit_10"
+    ]
+  }
+}
