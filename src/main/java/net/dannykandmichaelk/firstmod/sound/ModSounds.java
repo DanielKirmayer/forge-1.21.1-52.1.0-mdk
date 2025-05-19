@@ -16,7 +16,17 @@ public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, FirstMod.MOD_ID);
 
-    public static final RegistryObject<SoundEvent> CHISEL_USE = registerSoundEvent("chisel_use");
+    public static final RegistryObject<SoundEvent> DAS_HIT_1 = registerSoundEvent("das_hit_1");
+    public static final RegistryObject<SoundEvent> DAS_HIT_2 = registerSoundEvent("das_hit_2");
+    public static final RegistryObject<SoundEvent> DAS_HIT_3 = registerSoundEvent("das_hit_3");
+    public static final RegistryObject<SoundEvent> DAS_HIT_4 = registerSoundEvent("das_hit_4");
+    public static final RegistryObject<SoundEvent> DAS_HIT_5 = registerSoundEvent("das_hit_5");
+    public static final RegistryObject<SoundEvent> DAS_HIT_6 = registerSoundEvent("das_hit_6");
+    public static final RegistryObject<SoundEvent> DAS_HIT_7 = registerSoundEvent("das_hit_7");
+    public static final RegistryObject<SoundEvent> DAS_HIT_8 = registerSoundEvent("das_hit_8");
+    public static final RegistryObject<SoundEvent> DAS_HIT_9 = registerSoundEvent("das_hit_9");
+    public static final RegistryObject<SoundEvent> DAS_HIT_10 = registerSoundEvent("das_hit_10");
+
 
 
 
