@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1000,
+  "group": "cryonite",
+  "ingredient": "firstmod:cryonite_ore",
+  "result": {
+    "id": "firstmod:cryonite"
+  }
+}
