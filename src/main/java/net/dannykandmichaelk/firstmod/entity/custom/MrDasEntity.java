@@ -65,6 +65,7 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
     public final AnimationState attackAnimationState = new AnimationState();
+    private int timesHit = 0;
     private int remainingPersistentAngerTime;
     private UUID persistentAngerTarget;
     private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
@@ -177,7 +178,33 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return ModSounds.DAS_HIT_1.get();
+
+        if (!(timesHit % 3 == 0)) {
+            timesHit++;
+            return ModSounds.DAS_HIT_1.get();
+
+        }
+        else{
+            int rand = (int) ((Math.random() * 11) + 2);
+
+            return switch (rand) {
+                case 2 -> ModSounds.DAS_HIT_2.get();
+                case 3 -> ModSounds.DAS_HIT_3.get();
+                case 4 -> ModSounds.DAS_HIT_4.get();
+                case 5 -> ModSounds.DAS_HIT_5.get();
+                case 6 -> ModSounds.DAS_HIT_6.get();
+                case 7 -> ModSounds.DAS_HIT_7.get();
+                case 8 -> ModSounds.DAS_HIT_8.get();
+                case 9 -> ModSounds.DAS_HIT_9.get();
+                case 10 -> ModSounds.DAS_HIT_10.get();
+                case 11 -> ModSounds.DAS_HIT_11.get();
+                case 12 -> ModSounds.DAS_HIT_12.get();
+                case 13 -> ModSounds.DAS_HIT_13.get();
+                default -> ModSounds.DAS_HIT_1.get();
+            };
+        }
+
+
     }
 
 
