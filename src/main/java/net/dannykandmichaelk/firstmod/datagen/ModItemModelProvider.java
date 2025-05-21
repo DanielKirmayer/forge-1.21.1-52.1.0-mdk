@@ -31,6 +31,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CRYONITE_LEGGINGS.get());
         basicItem(ModItems.CRYONITE_BOOTS.get());
 
+        handheldItem(ModItems.CRYONITE_SWORD);
+
 
 
     }
