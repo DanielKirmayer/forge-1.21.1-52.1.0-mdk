@@ -30,5 +30,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.RAW_CRYONITE_BLOCK.get());
+
+        tag(BlockTags.PIGLIN_REPELLENTS)
+                .add(ModBlocks.RAW_CRYONITE_BLOCK.get());
     }
 }

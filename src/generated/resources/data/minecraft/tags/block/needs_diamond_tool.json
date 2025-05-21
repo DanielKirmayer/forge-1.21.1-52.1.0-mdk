@@ -1,8 +1,5 @@
 {
   "values": [
-    "firstmod:trumpium_block",
-    "firstmod:cryonite_block",
-    "firstmod:cryonite_ore",
-    "firstmod:deepslate_cryonite_ore"
+    "firstmod:raw_cryonite_block"
   ]
 }

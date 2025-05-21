@@ -1,11 +1,9 @@
 {
-  "replace": false,
   "values": [
-    "firstmod:raw_cryonite_block",
-    "firstmod:trumpium_block",
     "firstmod:cryonite_block",
+    "firstmod:raw_cryonite_block",
     "firstmod:cryonite_ore",
-    "firstmod:deepslate_cryonite_ore"
-
+    "firstmod:deepslate_cryonite_ore",
+    "firstmod:trumpium_block"
   ]
 }

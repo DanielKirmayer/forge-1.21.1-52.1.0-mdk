@@ -30,14 +30,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.CRYONITE.get())
                 .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModItems.CRYONITE.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TRUMPIUM_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.TRUMPIUM.get())
+                .unlockedBy(getHasName(ModItems.TRUMPIUM.get()), has(ModItems.TRUMPIUM.get())).save(pRecipeOutput);
+
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRYONITE.get(), 9)
                 .requires(ModBlocks.CRYONITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.CRYONITE_BLOCK.get()), has(ModBlocks.CRYONITE_BLOCK.get())).save(pRecipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRYONITE.get(), 32)
-                .requires(ModBlocks.TRUMPIUM_BLOCK.get())// look at this if problems arise
-                .unlockedBy(getHasName(ModBlocks.CRYONITE_BLOCK.get()), has(ModBlocks.CRYONITE_BLOCK.get()))
-                .save(pRecipeOutput, FirstMod.MOD_ID + ":cryonite_from_trumpium_block");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TRUMPIUM.get(), 9)
+                .requires(ModBlocks.TRUMPIUM_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.TRUMPIUM_BLOCK.get()), has(ModBlocks.TRUMPIUM_BLOCK.get())).save(pRecipeOutput);
+
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TRUMPIUM.get(), 9)
+//                .requires(ModBlocks.TRUMPIUM_BLOCK.get())// look at this if problems arise
+//                .unlockedBy(getHasName(ModBlocks.TRUMPIUM_BLOCK.get()), has(ModBlocks.TRUMPIUM_BLOCK.get()))
+//                .save(pRecipeOutput, FirstMod.MOD_ID + ":trumpium_from_trumpium_block");
 
         oreSmelting(pRecipeOutput, CRYONITE_SMELTABLES, RecipeCategory.MISC, ModItems.CRYONITE.get(), 0.25f, 200, "cryonite");
         oreBlasting(pRecipeOutput, CRYONITE_SMELTABLES, RecipeCategory.MISC, ModItems.CRYONITE.get(), 0.25f, 100, "cryonite");

@@ -31,6 +31,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.CRYONITE_BLOCK.get());
         dropSelf(ModBlocks.TRUMPIUM_BLOCK.get());
+        dropSelf(ModBlocks.RAW_CRYONITE_BLOCK.get());
         // dropSelf(ModBlocks.MAGIC_BLOCK.get());
 
         this.add(ModBlocks.CRYONITE_ORE.get(),

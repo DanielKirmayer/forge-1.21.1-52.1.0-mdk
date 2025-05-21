@@ -2,9 +2,11 @@
   "type": "minecraft:smelting",
   "category": "misc",
   "cookingtime": 200,
-  "experience": 1000,
+  "experience": 0.25,
   "group": "cryonite",
-  "ingredient": "firstmod:deepslate_cryonite_ore",
+  "ingredient": {
+    "item": "firstmod:deepslate_cryonite_ore"
+  },
   "result": {
     "id": "firstmod:cryonite"
   }

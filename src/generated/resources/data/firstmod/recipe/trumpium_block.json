@@ -6,14 +6,13 @@
       "item": "firstmod:trumpium"
     }
   },
-  "pattern" : [
+  "pattern": [
     "AAA",
     "AAA",
     "AAA"
   ],
-
   "result": {
-    "count" : 1,
-    "id" : "firstmod:trumpium_block"
+    "count": 1,
+    "id": "firstmod:trumpium_block"
   }
 }
