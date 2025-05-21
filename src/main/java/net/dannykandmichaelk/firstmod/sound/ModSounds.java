@@ -26,6 +26,17 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> DAS_HIT_8 = registerSoundEvent("das_hit_8");
     public static final RegistryObject<SoundEvent> DAS_HIT_9 = registerSoundEvent("das_hit_9");
     public static final RegistryObject<SoundEvent> DAS_HIT_10 = registerSoundEvent("das_hit_10");
+    public static final RegistryObject<SoundEvent> DAS_HIT_11 = registerSoundEvent("das_hit_11");
+    public static final RegistryObject<SoundEvent> DAS_HIT_12 = registerSoundEvent("das_hit_12");
+    public static final RegistryObject<SoundEvent> DAS_HIT_13 = registerSoundEvent("das_hit_13");
+    public static final RegistryObject<SoundEvent> DAS_HIT_14 = registerSoundEvent("das_hit_14");
+    public static final RegistryObject<SoundEvent> DAS_HIT_15 = registerSoundEvent("das_hit_15");
+    public static final RegistryObject<SoundEvent> DAS_HIT_16 = registerSoundEvent("das_hit_16");
+    public static final RegistryObject<SoundEvent> DAS_HIT_17 = registerSoundEvent("das_hit_17");
+    public static final RegistryObject<SoundEvent> DAS_HIT_18 = registerSoundEvent("das_hit_18");
+    public static final RegistryObject<SoundEvent> DAS_HIT_19 = registerSoundEvent("das_hit_19");
+    public static final RegistryObject<SoundEvent> DAS_HIT_20 = registerSoundEvent("das_hit_20");
+
 
 
 
