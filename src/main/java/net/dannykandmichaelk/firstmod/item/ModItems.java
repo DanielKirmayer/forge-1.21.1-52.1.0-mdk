@@ -46,6 +46,10 @@ public class ModItems {
 
 
 
+    public static final RegistryObject<Item> CRYONITE_SWORD = ITEMS.register("cryonite_sword",
+            () -> new SwordItem(ModToolTiers.CRYONITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.CRYONITE,5,-.5f))));
+
+
     public static final RegistryObject<Item> MRDAS_SPAWN_EGG = ITEMS.register("mrdas_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.MRDAS, 0x53524b, 0xdac741, new Item.Properties()));
 
