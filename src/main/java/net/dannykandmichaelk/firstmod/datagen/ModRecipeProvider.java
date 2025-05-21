@@ -6,6 +6,7 @@ import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -36,6 +37,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.TRUMPIUM.get())
                 .unlockedBy(getHasName(ModItems.TRUMPIUM.get()), has(ModItems.TRUMPIUM.get())).save(pRecipeOutput);
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CRYONITE_SWORD.get())
+                        .pattern("A")
+                        .pattern("A")
+                                .pattern("B")
+                                        .define('A', ModItems.CRYONITE.get())
+                                                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModItems.CRYONITE.get())).save(pRecipeOutput);
+
+
+
+
+
+
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRYONITE.get(), 9)
