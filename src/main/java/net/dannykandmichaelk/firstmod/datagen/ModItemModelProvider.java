@@ -35,6 +35,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
 
+
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
