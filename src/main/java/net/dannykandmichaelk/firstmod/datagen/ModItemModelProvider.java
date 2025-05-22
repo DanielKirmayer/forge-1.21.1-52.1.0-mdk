@@ -33,6 +33,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ModItems.CRYONITE_SWORD);
         handheldItem(ModItems.CRYONITE_PICKAXE);
+        handheldItem(ModItems.KAUPEN_BOW);
 
 
 
