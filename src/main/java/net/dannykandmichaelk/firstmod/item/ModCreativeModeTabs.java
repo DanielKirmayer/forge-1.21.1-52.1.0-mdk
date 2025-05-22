@@ -2,6 +2,7 @@ package net.dannykandmichaelk.firstmod.item;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
+import net.dannykandmichaelk.firstmod.enchantment.ModEnchantments;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
