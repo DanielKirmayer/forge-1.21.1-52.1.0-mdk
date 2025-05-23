@@ -24,7 +24,7 @@ public class ModEnchantments {
         register(context, LIGHTNING_STRIKER, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
-                        5,
+                        6,
                         3,
                         Enchantment.dynamicCost(5, 8),
                         Enchantment.dynamicCost(25, 8),

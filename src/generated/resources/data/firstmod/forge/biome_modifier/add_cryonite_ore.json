@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:ice_spikes",
+    "minecraft:snowy_plains",
+    "minecraft:frozen_river"
+  ],
+  "features": "firstmod:cryonite_ore_placed",
+  "step": "underground_ores"
+}
