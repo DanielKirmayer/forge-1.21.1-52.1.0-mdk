@@ -1,11 +1,13 @@
 package net.dannykandmichaelk.firstmod.datagen;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
+import net.dannykandmichaelk.firstmod.block.ModBlocks;
 import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.dannykandmichaelk.firstmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -27,5 +29,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.COAL)
                 .add(Items.STICK)
                 .add(Items.COMPASS);
+
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.EVERGREEN_LOG.get().asItem())
+                .add(ModBlocks.EVERGREEN_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_EVERGREEN_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_EVERGREEN_WOOD.get().asItem());
+
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.EVERGREEN_PLANKS.get().asItem());
     }
 }

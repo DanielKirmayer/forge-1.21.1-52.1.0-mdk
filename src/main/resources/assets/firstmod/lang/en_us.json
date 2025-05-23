@@ -21,5 +21,15 @@
   "creativetab.firstmod.sigma_items": "Sigma Items",
   "entity.firstmod.mrdas": "Mr Das",
   "entity.firstmod.werewolf": "Giga Werewolf",
-  "enchantment.firstmod.lightning_striker": "Lightning Striker"
+  "enchantment.firstmod.lightning_striker": "Lightning Striker",
+  "item.firstmod.kaupen_bow": "Daniel Bow",
+
+  "block.firstmod.evergreen_log": "Evergreen Log",
+  "block.firstmod.evergreen_planks": "Evergreen Planks",
+  "block.firstmod.evergreen_wood": "Evergreen Wood",
+  "block.firstmod.stripped_evergreen_log": "Stripped Evergreen Log",
+  "block.firstmod.stripped_evergreen_wood": "Stripped Evergreen Wood",
+  "block.firstmod.evergreen_leaves": "Evergreen Leaves",
+
+  "block.firstmod.evergreen_sapling": "Evergreen Sapling"
 }
