@@ -1,6 +1,13 @@
-// 1.21.1	2025-05-23T09:56:12.2109778	Loot Tables
+// 1.21.1	2025-05-23T10:37:42.2089709	Loot Tables
 e42dbeae2e77974c197794688e310083ae6b2f05 data/firstmod/loot_table/blocks/cryonite_block.json
 bbe6c11dbf83afdd1361e3b55409b31f9c18f03f data/firstmod/loot_table/blocks/cryonite_ore.json
 78f61d474b17e7298cb51ce947eb1f9f8a16e5b6 data/firstmod/loot_table/blocks/deepslate_cryonite_ore.json
+042982d82e2a21365367e240597828da8e7b0b7b data/firstmod/loot_table/blocks/evergreen_leaves.json
+938c20d16a8791c1e3365871cc743ea3568688bd data/firstmod/loot_table/blocks/evergreen_log.json
+48cb2124e8bc93f4084a437b36462b7816165e42 data/firstmod/loot_table/blocks/evergreen_planks.json
+3b44d42b5ef73d6e028b5b533a9750b69c0e2ff2 data/firstmod/loot_table/blocks/evergreen_sapling.json
+8a37edc01b89656eb94d27c291bf4cf09f7ea871 data/firstmod/loot_table/blocks/evergreen_wood.json
 b8ead9acad1df11761de3f7f44d62e8418ec2e11 data/firstmod/loot_table/blocks/raw_cryonite_block.json
+a585d77572923ec57a6104ad014f1d469bf40272 data/firstmod/loot_table/blocks/stripped_evergreen_log.json
+8e5e6229798898073defb7c21e177269a53681c8 data/firstmod/loot_table/blocks/stripped_evergreen_wood.json
 74c00ae51a0406e46374ecbc74f172f1f93e02d1 data/firstmod/loot_table/blocks/trumpium_block.json

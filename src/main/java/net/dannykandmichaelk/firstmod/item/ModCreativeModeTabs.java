@@ -37,6 +37,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CRYONITE_SWORD.get());
                         output.accept(ModItems.CRYONITE_PICKAXE.get());
 
+
+                        output.accept(ModBlocks.EVERGREEN_LOG.get());
+                        output.accept(ModBlocks.EVERGREEN_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_EVERGREEN_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
+
+                        output.accept(ModBlocks.EVERGREEN_PLANKS.get());
+                        output.accept(ModBlocks.EVERGREEN_SAPLING.get());
+
+                        output.accept(ModBlocks.EVERGREEN_LEAVES.get());
+
                     }).build());
 
 

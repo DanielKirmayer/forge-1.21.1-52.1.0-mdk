@@ -33,5 +33,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.PIGLIN_REPELLENTS)
                 .add(ModBlocks.RAW_CRYONITE_BLOCK.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.EVERGREEN_LOG.get())
+                .add(ModBlocks.EVERGREEN_WOOD.get())
+                .add(ModBlocks.STRIPPED_EVERGREEN_LOG.get())
+                .add(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
     }
 }

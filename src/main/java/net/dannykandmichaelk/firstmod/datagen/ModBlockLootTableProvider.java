@@ -38,6 +38,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.CRYONITE_ORE.get(), ModItems.RAW_CRYONITE.get()));
         this.add(ModBlocks.DEEPSLATE_CRYONITE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_CRYONITE_ORE.get(), ModItems.RAW_CRYONITE.get(), 1, 2));
+
+
+        this.dropSelf(ModBlocks.EVERGREEN_LOG.get());
+        this.dropSelf(ModBlocks.EVERGREEN_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
+        this.dropSelf(ModBlocks.EVERGREEN_PLANKS.get());
+        this.dropSelf(ModBlocks.EVERGREEN_SAPLING.get());
+
+        this.add(ModBlocks.EVERGREEN_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.EVERGREEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
