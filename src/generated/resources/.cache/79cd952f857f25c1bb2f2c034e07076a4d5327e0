@@ -1,4 +1,5 @@
-// 1.21.1	2025-05-23T10:02:10.288884	Tags for minecraft:block mod id firstmod
+// 1.21.1	2025-05-23T10:37:42.2089709	Tags for minecraft:block mod id firstmod
+895e9941a3b691d7c700d602cc842b3ce6c4772a data/minecraft/tags/block/logs_that_burn.json
 a1ea6eeb8dacf668cefab3b17a5f65d1e317a6c9 data/minecraft/tags/block/mineable/pickaxe.json
 e0143a537910e93fed75cfb0c472c18cdf057cc4 data/minecraft/tags/block/needs_diamond_tool.json
 c4763433b39a5463f04c1f806ee00479e23dc0d4 data/minecraft/tags/block/needs_iron_tool.json

@@ -1,2 +1,4 @@
-// 1.21.1	2025-05-23T10:02:10.3097491	Tags for minecraft:item mod id firstmod
+// 1.21.1	2025-05-23T10:37:42.2191801	Tags for minecraft:item mod id firstmod
 d650e7f1dfe41b1c4d852521cca6c9b366eb7442 data/firstmod/tags/item/transformable_items.json
+895e9941a3b691d7c700d602cc842b3ce6c4772a data/minecraft/tags/item/logs_that_burn.json
+25a354fc0bb4de29543dcd66d676665f8cac8b60 data/minecraft/tags/item/planks.json
