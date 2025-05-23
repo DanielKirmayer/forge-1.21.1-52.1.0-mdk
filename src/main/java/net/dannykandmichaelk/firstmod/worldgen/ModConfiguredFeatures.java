@@ -43,12 +43,12 @@ public class ModConfiguredFeatures {
 
         register(context, EVERGREEN_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.EVERGREEN_LOG.get()),
-                new ForkingTrunkPlacer(4, 4, 3),
+                new ForkingTrunkPlacer(15, 15, 15),
 
                 BlockStateProvider.simple(ModBlocks.EVERGREEN_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3),
+                new BlobFoliagePlacer(ConstantInt.of(15), ConstantInt.of(15), 15),
 
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+                new TwoLayersFeatureSize(10, 0, 15)).build());
 
     }
 
