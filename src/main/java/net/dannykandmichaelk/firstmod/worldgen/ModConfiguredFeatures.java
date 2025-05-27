@@ -17,6 +17,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -43,12 +44,12 @@ public class ModConfiguredFeatures {
 
         register(context, EVERGREEN_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.EVERGREEN_LOG.get()),
-                new ForkingTrunkPlacer(15, 15, 15),
+                new DarkOakTrunkPlacer(15, 15, 15),
 
                 BlockStateProvider.simple(ModBlocks.EVERGREEN_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(15), ConstantInt.of(15), 15),
+                new BlobFoliagePlacer(ConstantInt.of(10), ConstantInt.of(10), 10),
 
-                new TwoLayersFeatureSize(10, 0, 15)).build());
+                new TwoLayersFeatureSize(1, 0, 2)).build());
 
     }
 
