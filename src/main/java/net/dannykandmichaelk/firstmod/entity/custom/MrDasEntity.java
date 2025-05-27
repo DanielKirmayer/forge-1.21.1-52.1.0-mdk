@@ -86,31 +86,89 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(7, new GhastShootFireballGoal(this));
+        this.goalSelector.addGoal(5, new MrDasEntity.RandomFloatAroundGoal(this));
+        this.goalSelector.addGoal(7, new MrDasEntity.GhastLookGoal(this));
         this.targetSelector
                 .addGoal(
                         1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, p_341441_ -> Math.abs(p_341441_.getY() - this.getY()) <= 4.0)
                 );
-////        this.goalSelector.addGoal(0,new FloatGoal(this));
-//
-//
-////        this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers());
-////        this.goalSelector.addGoal(0, new MeleeAttackGoal(this, 3, true));
-//        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, 1, false, true, this::isAngryAt));
-////        this.targetSelector.addGoal(1, new SpellcasterCastingSpellGoal());
-//        this.goalSelector.addGoal(7, new Ghast.GhastLookGoal(this));
-//        this.goalSelector.addGoal(7, new Ghast.GhastShootFireballGoal(this));
-////        this.goalSelector.addGoal(1, new MrDasSummonEntityGoal());
-//
-//
-////        this.goalSelector.addGoal(3, new TemptGoal(this, 1.125, stack -> stack.is(ModItems.TRUMPIUM.get()), false));
-//
-//
-//
-////        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0));
-//        this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));
-//        this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
-        super.registerGoals();
-//
+    }
+    static class GhastMoveControl extends MoveControl {
+        private final Ghast ghast;
+        private int floatDuration;
+
+        public GhastMoveControl(Ghast pGhast) {
+            super(pGhast);
+            this.ghast = pGhast;
+        }
+
+        @Override
+        public void tick() {
+            if (this.operation == MoveControl.Operation.MOVE_TO) {
+                if (this.floatDuration-- <= 0) {
+                    this.floatDuration = this.floatDuration + this.ghast.getRandom().nextInt(5) + 2;
+                    Vec3 vec3 = new Vec3(
+                            this.wantedX - this.ghast.getX(), this.wantedY - this.ghast.getY(), this.wantedZ - this.ghast.getZ()
+                    );
+                    double d0 = vec3.length();
+                    vec3 = vec3.normalize();
+                    if (this.canReach(vec3, Mth.ceil(d0))) {
+                        this.ghast.setDeltaMovement(this.ghast.getDeltaMovement().add(vec3.scale(0.1)));
+                    } else {
+                        this.operation = MoveControl.Operation.WAIT;
+                    }
+                }
+            }
+        }
+
+        private boolean canReach(Vec3 pPos, int pLength) {
+            AABB aabb = this.ghast.getBoundingBox();
+
+            for (int i = 1; i < pLength; i++) {
+                aabb = aabb.move(pPos);
+                if (!this.ghast.level().noCollision(this.ghast, aabb)) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    }
+    static class RandomFloatAroundGoal extends Goal {
+        private final Ghast ghast;
+
+        public RandomFloatAroundGoal(Ghast pGhast) {
+            this.ghast = pGhast;
+            this.setFlags(EnumSet.of(Goal.Flag.MOVE));
+        }
+
+        @Override
+        public boolean canUse() {
+            MoveControl movecontrol = this.ghast.getMoveControl();
+            if (!movecontrol.hasWanted()) {
+                return true;
+            } else {
+                double d0 = movecontrol.getWantedX() - this.ghast.getX();
+                double d1 = movecontrol.getWantedY() - this.ghast.getY();
+                double d2 = movecontrol.getWantedZ() - this.ghast.getZ();
+                double d3 = d0 * d0 + d1 * d1 + d2 * d2;
+                return d3 < 1.0 || d3 > 3600.0;
+            }
+        }
+
+        @Override
+        public boolean canContinueToUse() {
+            return false;
+        }
+
+        @Override
+        public void start() {
+            RandomSource randomsource = this.ghast.getRandom();
+            double d0 = this.ghast.getX() + (double)((randomsource.nextFloat() * 2.0F - 1.0F) * 16.0F);
+            double d1 = this.ghast.getY() + (double)((randomsource.nextFloat() * 2.0F - 1.0F) * 16.0F);
+            double d2 = this.ghast.getZ() + (double)((randomsource.nextFloat() * 2.0F - 1.0F) * 16.0F);
+            this.ghast.getMoveControl().setWantedPosition(d0, d1, d2, 1.0);
+        }
     }
 
 
@@ -144,6 +202,7 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
 
 
 
+
     @Override
     protected SoundEvent getDeathSound() {
         return ModSounds.DAS_HIT_1.get();
@@ -151,7 +210,7 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
 
 
     private void playAngerSound() {
-        this.playSound(ModSounds.DAS_HIT_1.get(), this.getSoundVolume() * 50.0F, this.getVoicePitch() * 0.01F);
+        this.playSound(ModSounds.DAS_HIT_5.get(), this.getSoundVolume() * 50.0F, this.getVoicePitch());
     }
 
 
@@ -173,7 +232,7 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
 
     @Override
     protected void playStepSound(BlockPos pPos, BlockState pState) {
-        this.playSound(SoundEvents.RAVAGER_STEP, 0.15F, 0.05F);
+        this.playSound(ModSounds.DAS_HIT_9.get(), 0.15F, 0.05F);
     }
 
     @Override
@@ -186,6 +245,7 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
         }
         else{
             int rand = (int) ((Math.random() * 11) + 2);
+            timesHit++;
 
             return switch (rand) {
                 case 2 -> ModSounds.DAS_HIT_2.get();
@@ -198,13 +258,47 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
                 case 9 -> ModSounds.DAS_HIT_9.get();
                 case 10 -> ModSounds.DAS_HIT_10.get();
                 case 11 -> ModSounds.DAS_HIT_11.get();
-                case 12 -> ModSounds.DAS_HIT_12.get();
-                case 13 -> ModSounds.DAS_HIT_13.get();
                 default -> ModSounds.DAS_HIT_1.get();
             };
         }
 
 
+    }
+    static class GhastLookGoal extends Goal {
+        private final Ghast ghast;
+
+        public GhastLookGoal(Ghast pGhast) {
+            this.ghast = pGhast;
+            this.setFlags(EnumSet.of(Goal.Flag.LOOK));
+        }
+
+        @Override
+        public boolean canUse() {
+            return true;
+        }
+
+        @Override
+        public boolean requiresUpdateEveryTick() {
+            return true;
+        }
+
+        @Override
+        public void tick() {
+            if (this.ghast.getTarget() == null) {
+                Vec3 vec3 = this.ghast.getDeltaMovement();
+                this.ghast.setYRot(-((float)Mth.atan2(vec3.x, vec3.z)) * (180.0F / (float)Math.PI));
+                this.ghast.yBodyRot = this.ghast.getYRot();
+            } else {
+                LivingEntity livingentity = this.ghast.getTarget();
+                double d0 = 64.0;
+                if (livingentity.distanceToSqr(this.ghast) < 4096.0) {
+                    double d1 = livingentity.getX() - this.ghast.getX();
+                    double d2 = livingentity.getZ() - this.ghast.getZ();
+                    this.ghast.setYRot(-((float)Mth.atan2(d1, d2)) * (180.0F / (float)Math.PI));
+                    this.ghast.yBodyRot = this.ghast.getYRot();
+                }
+            }
+        }
     }
 
 
@@ -418,7 +512,7 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
                     Level level = this.ghast.level();
                     this.chargeTime++;
                     if (this.chargeTime == 10 && !this.ghast.isSilent()) {
-                        level.levelEvent(null, 1015, this.ghast.blockPosition(), 0);
+                        level.levelEvent(null, 809, this.ghast.blockPosition(), 0);
                     }
 
                     if (this.chargeTime == 5) {
@@ -429,7 +523,7 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
                             double d4 = livingentity.getZ() - (this.ghast.getZ() + vec3.z * 4.0);
                             Vec3 vec31 = new Vec3(d2, d3, d4);
                             if (!this.ghast.isSilent()) {
-                                level.levelEvent(null, 1016, this.ghast.blockPosition(), 0);
+                                level.levelEvent(null, 116, this.ghast.blockPosition(), 0);
                             }
 
                             LargeFireball largefireball = new LargeFireball(level, this.ghast, vec31.normalize(), 3);
