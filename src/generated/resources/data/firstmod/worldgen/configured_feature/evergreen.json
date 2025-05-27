@@ -9,10 +9,14 @@
       }
     },
     "foliage_placer": {
-      "type": "minecraft:blob_foliage_placer",
-      "height": 10,
-      "offset": 10,
-      "radius": 10
+      "type": "minecraft:mega_pine_foliage_placer",
+      "crown_height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 17,
+        "min_inclusive": 13
+      },
+      "offset": 0,
+      "radius": 0
     },
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
@@ -34,10 +38,10 @@
       "upper_size": 2
     },
     "trunk_placer": {
-      "type": "minecraft:dark_oak_trunk_placer",
+      "type": "minecraft:forking_trunk_placer",
       "base_height": 15,
-      "height_rand_a": 15,
-      "height_rand_b": 15
+      "height_rand_a": 2,
+      "height_rand_b": 2
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
