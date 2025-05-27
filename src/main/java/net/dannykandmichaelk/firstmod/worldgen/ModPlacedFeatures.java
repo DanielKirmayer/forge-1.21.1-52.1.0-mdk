@@ -1,9 +1,12 @@
 package net.dannykandmichaelk.firstmod.worldgen;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
+import net.dannykandmichaelk.firstmod.block.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -15,8 +18,9 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final ResourceKey<PlacedFeature> CRYONITE_ORE_PLACED_KEY = registerKey("cryonite_ore_placed");
 
+    public static final ResourceKey<PlacedFeature> CRYONITE_ORE_PLACED_KEY = registerKey("cryonite_ore_placed");
+    public static final ResourceKey<PlacedFeature> EVERGEEN_PLACED_KEY = registerKey("evergreen_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -24,6 +28,10 @@ public class ModPlacedFeatures {
         register(context, CRYONITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_CRYONITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(1,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-63), VerticalAnchor.absolute(-63))));
+
+        register(context, EVERGEEN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.EVERGREEN_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.EVERGREEN_SAPLING.get()));
 
     }
 

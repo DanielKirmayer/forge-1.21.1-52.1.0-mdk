@@ -9,6 +9,6 @@
     "minecraft:frozen_river",
     "minecraft:frozen_ocean"
   ],
-  "features": "firstmod:cryonite_ore_placed",
-  "step": "underground_ores"
+  "features": "firstmod:evergreen_placed",
+  "step": "vegetal_decoration"
 }

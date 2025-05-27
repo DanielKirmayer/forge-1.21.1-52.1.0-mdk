@@ -17,6 +17,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_CRYONITE_ORE = registerKey("add_cryonite_ore");
+    public static final ResourceKey<BiomeModifier> ADD_EVERGREEN_TREE = registerKey("add_tree_evergreen");
+
 
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
@@ -27,9 +29,14 @@ public class ModBiomeModifiers {
 
 
          context.register(ADD_CRYONITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                 HolderSet.direct(biomes.getOrThrow(Biomes.ICE_SPIKES), biomes.getOrThrow(Biomes.SNOWY_PLAINS), biomes.getOrThrow(Biomes.FROZEN_RIVER)),
+                 HolderSet.direct(biomes.getOrThrow(Biomes.ICE_SPIKES), biomes.getOrThrow(Biomes.SNOWY_PLAINS), biomes.getOrThrow(Biomes.SNOWY_BEACH), biomes.getOrThrow(Biomes.SNOWY_TAIGA), biomes.getOrThrow(Biomes.SNOWY_SLOPES), biomes.getOrThrow(Biomes.FROZEN_RIVER), biomes.getOrThrow(Biomes.FROZEN_OCEAN)),
                  HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY)),
                  GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_EVERGREEN_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.ICE_SPIKES), biomes.getOrThrow(Biomes.SNOWY_PLAINS), biomes.getOrThrow(Biomes.SNOWY_BEACH), biomes.getOrThrow(Biomes.SNOWY_TAIGA), biomes.getOrThrow(Biomes.SNOWY_SLOPES), biomes.getOrThrow(Biomes.FROZEN_RIVER), biomes.getOrThrow(Biomes.FROZEN_OCEAN)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.EVERGEEN_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
 
 
     }

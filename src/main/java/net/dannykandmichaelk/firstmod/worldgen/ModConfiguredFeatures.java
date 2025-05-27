@@ -21,6 +21,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePla
 import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaPineFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.GiantTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
@@ -48,12 +49,11 @@ public class ModConfiguredFeatures {
 
         register(context, EVERGREEN_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.EVERGREEN_LOG.get()),
-                new ForkingTrunkPlacer(15, 2, 2),
-
+                new FancyTrunkPlacer(32, 24, 24),
                 BlockStateProvider.simple(ModBlocks.EVERGREEN_LEAVES.get()),
-                new MegaPineFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), UniformInt.of(13, 17)),
-
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+                new MegaPineFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), UniformInt.of(3, 7)),
+                new TwoLayersFeatureSize(1, 1, 2))
+                .build());
 
     }
 
