@@ -24,7 +24,7 @@ public class ModEnchantments {
         register(context, LIGHTNING_STRIKER, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
-                        5,
+                        6,
                         3,
                         Enchantment.dynamicCost(5, 8),
                         Enchantment.dynamicCost(25, 8),
@@ -34,7 +34,6 @@ public class ModEnchantments {
                 .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
                 .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
                         EnchantmentTarget.VICTIM, new LightningStrikerEnchantmentEffect()));
-
     }
 
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key, Enchantment.Builder builder) {
