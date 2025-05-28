@@ -234,6 +234,23 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
     protected void playStepSound(BlockPos pPos, BlockState pState) {
         this.playSound(ModSounds.DAS_HIT_9.get(), 0.15F, 0.05F);
     }
+    private static boolean isReflectedFireball(DamageSource pDamageSource) {
+        return false;
+    }
+
+
+    @Override
+    public boolean hurt(DamageSource pSource, float pAmount) {
+        DamageSource damageSource = damageSources().cactus();
+
+
+        if (isReflectedFireball(pSource)) {
+            super.hurt(damageSource, 1000.0F);
+            return true;
+        } else {
+            return this.isInvulnerableTo(pSource) ? false : super.hurt(damageSource, pAmount);
+        }
+    }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {

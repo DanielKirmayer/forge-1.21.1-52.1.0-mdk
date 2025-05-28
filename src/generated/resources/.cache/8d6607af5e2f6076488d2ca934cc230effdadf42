@@ -1,4 +1,13 @@
-// 1.21.1	2025-05-23T10:37:42.2191801	Tags for minecraft:item mod id firstmod
+// 1.21.1	2025-05-28T10:54:03.4117734	Tags for minecraft:item mod id firstmod
 d650e7f1dfe41b1c4d852521cca6c9b366eb7442 data/firstmod/tags/item/transformable_items.json
+e8f76744e776a28f9bda57fadc127a8a89c8d2db data/minecraft/tags/item/enchantable/armor.json
+273e314ad7aab3db395eaeb7a1021dc9f12e4c3f data/minecraft/tags/item/enchantable/chest_armor.json
+4a18b976a9ebb523fe8dfb9a080b6b9a3ad05fc0 data/minecraft/tags/item/enchantable/durability.json
+e8f76744e776a28f9bda57fadc127a8a89c8d2db data/minecraft/tags/item/enchantable/equippable.json
+6b5b4c02211383e60eae32b3976ce88b72272d42 data/minecraft/tags/item/enchantable/foot_armor.json
+1846339b5aa5484bddf98c29854e0a01f1708997 data/minecraft/tags/item/enchantable/head_armor.json
+167d3f1f5638a5778399d2bd86f2b76ab9adcbf3 data/minecraft/tags/item/enchantable/mining.json
+9815a0ea6ff0f1993fac72d74502acb78cb2ff8e data/minecraft/tags/item/enchantable/sword.json
 895e9941a3b691d7c700d602cc842b3ce6c4772a data/minecraft/tags/item/logs_that_burn.json
 25a354fc0bb4de29543dcd66d676665f8cac8b60 data/minecraft/tags/item/planks.json
+4a18b976a9ebb523fe8dfb9a080b6b9a3ad05fc0 data/minecraft/tags/item/turtle_food.json

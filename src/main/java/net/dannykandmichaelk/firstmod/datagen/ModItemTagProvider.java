@@ -2,6 +2,7 @@ package net.dannykandmichaelk.firstmod.datagen;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
+import net.dannykandmichaelk.firstmod.item.ModArmorMaterials;
 import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.dannykandmichaelk.firstmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -38,5 +39,45 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.PLANKS)
                 .add(ModBlocks.EVERGREEN_PLANKS.get().asItem());
+
+        tag(ItemTags.ARMOR_ENCHANTABLE)
+                .add(ModItems.CRYONITE_HELMET.get())
+                .add(ModItems.CRYONITE_CHESTPLATE.get())
+                .add(ModItems.CRYONITE_LEGGINGS.get())
+                .add(ModItems.CRYONITE_BOOTS.get());
+        tag(ItemTags.HEAD_ARMOR_ENCHANTABLE)
+                .add(ModItems.CRYONITE_HELMET.get());
+        tag(ItemTags.FOOT_ARMOR_ENCHANTABLE)
+                .add(ModItems.CRYONITE_BOOTS.get());
+        tag(ItemTags.CHEST_ARMOR_ENCHANTABLE)
+                .add(ModItems.CRYONITE_CHESTPLATE.get());
+        tag(ItemTags.SWORD_ENCHANTABLE)
+                .add(ModItems.CRYONITE_SWORD.get());
+        tag(ItemTags.MINING_ENCHANTABLE)
+                .add(ModItems.CRYONITE_PICKAXE.get());
+        tag(ItemTags.EQUIPPABLE_ENCHANTABLE)
+                .add(ModItems.CRYONITE_HELMET.get())
+                .add(ModItems.CRYONITE_CHESTPLATE.get())
+                .add(ModItems.CRYONITE_LEGGINGS.get())
+                .add(ModItems.CRYONITE_BOOTS.get());
+        tag(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(ModItems.CRYONITE_HELMET.get())
+                .add(ModItems.CRYONITE_CHESTPLATE.get())
+                .add(ModItems.CRYONITE_LEGGINGS.get())
+                .add(ModItems.CRYONITE_BOOTS.get())
+                .add(ModItems.CRYONITE_PICKAXE.get())
+                .add(ModItems.CRYONITE_SWORD.get());
+        tag(ItemTags.TURTLE_FOOD)
+                .add(ModItems.CRYONITE_HELMET.get())
+                .add(ModItems.CRYONITE_CHESTPLATE.get())
+                .add(ModItems.CRYONITE_LEGGINGS.get())
+                .add(ModItems.CRYONITE_BOOTS.get())
+                .add(ModItems.CRYONITE_PICKAXE.get())
+                .add(ModItems.CRYONITE_SWORD.get());
+
+
+
+
+
     }
 }
