@@ -2,6 +2,7 @@ package net.dannykandmichaelk.firstmod;
 
 import com.mojang.logging.LogUtils;
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
+import net.dannykandmichaelk.firstmod.effect.ModEffects;
 import net.dannykandmichaelk.firstmod.enchantment.ModEnchantmentEffects;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.entity.client.MrDasRenderer;
@@ -48,6 +49,7 @@ public class FirstMod {
         ModEntities.register(modEventBus);
         ModSounds.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
+        ModEffects.MOB_EFFECTS.register(modEventBus);
 
         // Register the item to a creative tab
 //        modEventBus.addListener(this::addCreative);

@@ -20,15 +20,13 @@ public class FreezingWeaponItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        int fhitchance = 15;
-        int fduration = 120;
-        int sduration = 50;
+//        int fhitchance = 15;
 
-        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, sduration, 1), attacker);
+//        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, sduration, 1), attacker);
 
-        if (attacker.getRandom().nextInt(100) <= fhitchance) {
-            target.addEffect(new MobEffectInstance((Holder<MobEffect>) ModEffects.FREEZE.get(), fduration, 1), attacker);
-        }
+//        if (attacker.getRandom().nextInt(100) <= fhitchance) {
+            target.addEffect(new MobEffectInstance(ModEffects.FREEZE.getHolder().get(), 200));
+//        }
 
         return super.hurtEnemy(stack, target, attacker);
 
