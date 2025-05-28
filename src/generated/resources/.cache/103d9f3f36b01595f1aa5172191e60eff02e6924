@@ -1,0 +1,8 @@
+// 1.21.1	2025-05-27T10:49:58.3601853	Registries
+e546846c79be46994b69534c181a8edaba06a8f2 data/firstmod/enchantment/lightning_striker.json
+19776026c192b363d4d2a48da7868e4f45929a7e data/firstmod/forge/biome_modifier/add_cryonite_ore.json
+f55f34743837c85836ff9c48ab5a1318f7a9c1e8 data/firstmod/forge/biome_modifier/add_tree_evergreen.json
+6cb1f762e08cc799e73d8c640346b41fb4d769eb data/firstmod/worldgen/configured_feature/cryonite_ore.json
+f070997f7fc2dfc9f657888c1a13da2cb52fd075 data/firstmod/worldgen/configured_feature/evergreen.json
+8b533cb498651526c388f6850500c35f5c6188a9 data/firstmod/worldgen/placed_feature/cryonite_ore_placed.json
+c6b6bb25c0a562798bc0f1d872de6deacccad774 data/firstmod/worldgen/placed_feature/evergreen_placed.json

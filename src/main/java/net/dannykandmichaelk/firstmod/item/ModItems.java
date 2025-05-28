@@ -4,15 +4,17 @@ import net.dannykandmichaelk.firstmod.FirstMod;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.item.custom.ChiselItem;
 import net.dannykandmichaelk.firstmod.item.custom.ModArmorItem;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModItems {
+import static net.minecraft.world.item.Items.registerItem;
+
+public class ModItems implements JukeboxSongs{
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FirstMod.MOD_ID);
 
 
@@ -39,6 +41,17 @@ public class ModItems {
     public static final RegistryObject<Item> CRYONITE_BOOTS = ITEMS.register("cryonite_boots",
             () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem. Type.BOOTS.getDurability(18))));
+
+
+
+    public static final RegistryObject<Item> CRYONITE_SWORD = ITEMS.register("cryonite_sword",
+            () -> new SwordItem(ModToolTiers.CRYONITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.CRYONITE,5,-.5f))));
+
+    public static final RegistryObject<Item> CRYONITE_PICKAXE = ITEMS.register("cryonite_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.CRYONITE, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.CRYONITE,2,-1f))));
+
+    public static final RegistryObject<Item> KAUPEN_BOW = ITEMS.register("kaupen_bow",
+            () -> new BowItem(new Item.Properties().durability(500).jukeboxPlayable(PIGSTEP)));
 
     public static final RegistryObject<Item> MRDAS_SPAWN_EGG = ITEMS.register("mrdas_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.MRDAS, 0x53524b, 0xdac741, new Item.Properties()));

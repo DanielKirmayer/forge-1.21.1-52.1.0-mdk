@@ -7,6 +7,8 @@
   "item.firstmod.cryonite_chestplate" : "Cryonite Chestplate",
   "item.firstmod.cryonite_leggings" : "Cryonite Leggings",
   "item.firstmod.cryonite_boots" : "Cryonite Boots",
+  "item.firstmod.cryonite_sword" : "Cryonite Sword",
+  "item.firstmod.cryonite_pickaxe" : "Cryonite Pickaxe",
 
   "block.firstmod.raw_cryonite_block": "Block of Raw Cryonite",
   "block.firstmod.trumpium_block": "Block of Trumpium",
@@ -18,5 +20,16 @@
 
   "creativetab.firstmod.sigma_items": "Sigma Items",
   "entity.firstmod.mrdas": "Mr Das",
-  "entity.firstmod.werewolf": "Giga Werewolf"
+  "entity.firstmod.werewolf": "Giga Werewolf",
+  "enchantment.firstmod.lightning_striker": "Lightning Striker",
+  "item.firstmod.kaupen_bow": "Daniel Bow",
+
+  "block.firstmod.evergreen_log": "Evergreen Log",
+  "block.firstmod.evergreen_planks": "Evergreen Planks",
+  "block.firstmod.evergreen_wood": "Evergreen Wood",
+  "block.firstmod.stripped_evergreen_log": "Stripped Evergreen Log",
+  "block.firstmod.stripped_evergreen_wood": "Stripped Evergreen Wood",
+  "block.firstmod.evergreen_leaves": "Evergreen Leaves",
+
+  "block.firstmod.evergreen_sapling": "Evergreen Sapling"
 }

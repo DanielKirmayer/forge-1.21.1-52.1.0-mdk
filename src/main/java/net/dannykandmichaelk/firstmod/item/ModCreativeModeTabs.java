@@ -2,6 +2,7 @@ package net.dannykandmichaelk.firstmod.item;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
+import net.dannykandmichaelk.firstmod.enchantment.ModEnchantments;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -33,6 +34,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DEEPSLATE_CRYONITE_ORE.get());
                         output.accept(ModBlocks.CRYONITE_ORE.get());
                         output.accept(ModItems.MRDAS_SPAWN_EGG.get());
+                        output.accept(ModItems.CRYONITE_SWORD.get());
+                        output.accept(ModItems.CRYONITE_PICKAXE.get());
+
+
+                        output.accept(ModBlocks.EVERGREEN_LOG.get());
+                        output.accept(ModBlocks.EVERGREEN_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_EVERGREEN_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
+
+                        output.accept(ModBlocks.EVERGREEN_PLANKS.get());
+                        output.accept(ModBlocks.EVERGREEN_SAPLING.get());
+
+                        output.accept(ModBlocks.EVERGREEN_LEAVES.get());
 
                     }).build());
 

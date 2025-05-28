@@ -2,12 +2,15 @@ package net.dannykandmichaelk.firstmod;
 
 import com.mojang.logging.LogUtils;
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
+import net.dannykandmichaelk.firstmod.enchantment.ModEnchantmentEffects;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.entity.client.MrDasRenderer;
 import net.dannykandmichaelk.firstmod.entity.client.WerewolfRenderer;
 import net.dannykandmichaelk.firstmod.item.ModCreativeModeTabs;
 import net.dannykandmichaelk.firstmod.item.ModItems;
+import net.dannykandmichaelk.firstmod.sound.ModSounds;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.entity.ai.behavior.WorkAtComposter;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -43,6 +46,8 @@ public class FirstMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
+        ModEnchantmentEffects.register(modEventBus);
 
         // Register the item to a creative tab
 //        modEventBus.addListener(this::addCreative);

@@ -18,7 +18,7 @@ public class ModArmorItem extends ArmorItem {
     private static final Map<Holder<ArmorMaterial>, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<Holder<ArmorMaterial>, List<MobEffectInstance>>())
                     .put(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 10, false, false)))
+                            List.of(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 10, false, true),new MobEffectInstance(MobEffects.JUMP, 200, 10, false, false)))
                     .build();
 
     public ModArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties) {
