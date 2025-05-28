@@ -48,6 +48,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .define('B', Items.STICK)
                         .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModItems.CRYONITE.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CRYONITE_CLAYMORE.get())
+                        .pattern("ABA")
+                        .pattern(" C ")
+                        .pattern(" C ")
+                        .define('A', ModBlocks.CRYONITE_BLOCK.get())
+                        .define('B', ModItems.CRYONITE.get())
+                        .define('C', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModItems.CRYONITE.get())).save(pRecipeOutput);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CRYONITE_HELMET.get())
                 .pattern("AAA")

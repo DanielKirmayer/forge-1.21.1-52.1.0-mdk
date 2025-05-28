@@ -3,6 +3,7 @@ package net.dannykandmichaelk.firstmod.item;
 import net.dannykandmichaelk.firstmod.FirstMod;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.item.custom.ChiselItem;
+import net.dannykandmichaelk.firstmod.item.custom.FreezingWeaponItem;
 import net.dannykandmichaelk.firstmod.item.custom.ModArmorItem;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
@@ -44,8 +45,13 @@ public class ModItems implements JukeboxSongs{
 
 
 
+
+
     public static final RegistryObject<Item> CRYONITE_SWORD = ITEMS.register("cryonite_sword",
             () -> new SwordItem(ModToolTiers.CRYONITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.CRYONITE,5,-.5f))));
+
+    public static final RegistryObject<Item> CRYONITE_CLAYMORE = ITEMS.register( "cryonite_claymore",
+            () -> new FreezingWeaponItem(ModToolTiers.CRYONITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.CRYONITE, 10, -2f))));
 
     public static final RegistryObject<Item> CRYONITE_PICKAXE = ITEMS.register("cryonite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.CRYONITE, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.CRYONITE,2,-1f))));

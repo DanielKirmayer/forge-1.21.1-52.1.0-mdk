@@ -43,6 +43,14 @@ public class Config
     public static String magicNumberIntroduction;
     public static Set<Item> items;
 
+
+    public static void init() {}
+
+    //////////
+    //Loot config is registered internally in LootConfig. There were some load order issues otherwise.
+    //////////
+
+
     private static boolean validateItemName(final Object obj)
     {
         return obj instanceof final String itemName && ForgeRegistries.ITEMS.containsKey(ResourceLocation.tryParse(itemName));

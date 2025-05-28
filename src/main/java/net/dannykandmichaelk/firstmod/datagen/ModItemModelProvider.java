@@ -36,6 +36,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.CRYONITE_SWORD);
         handheldItem(ModItems.CRYONITE_PICKAXE);
         handheldItem(ModItems.KAUPEN_BOW);
+        handheldItem(ModItems.CRYONITE_CLAYMORE);
 
         saplingItem(ModBlocks.EVERGREEN_SAPLING);
 
