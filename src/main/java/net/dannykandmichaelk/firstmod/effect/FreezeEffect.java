@@ -5,6 +5,9 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 
 public class FreezeEffect extends MobEffect {
+    public double x;
+    public double y;
+    public double z;
 
     public FreezeEffect(MobEffectCategory MobEffectCategory, int color) {
         super (MobEffectCategory, color);
@@ -14,9 +17,9 @@ public class FreezeEffect extends MobEffect {
 
     @Override
     public void onEffectAdded(LivingEntity pLivingEntity, int pAmplifier) {
-        double x = pLivingEntity.getX();
-        double y = pLivingEntity.getY();
-        double z = pLivingEntity.getZ();
+       x = pLivingEntity.getX();
+       y = pLivingEntity.getY();
+       z = pLivingEntity.getZ();
 
 
         pLivingEntity.teleportTo(x, y, z);
@@ -28,7 +31,8 @@ public class FreezeEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        onEffectAdded(pLivingEntity, pAmplifier);
+        pLivingEntity.teleportTo(x,y,z);
+        pLivingEntity.setDeltaMovement(0, 0, 0);
         return super.applyEffectTick(pLivingEntity, pAmplifier);
     }
 }
