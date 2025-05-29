@@ -2,6 +2,7 @@ package net.dannykandmichaelk.firstmod.worldgen;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
+import net.dannykandmichaelk.firstmod.worldgen.tree.configuration.EvergreenTreeConfiguration;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -47,13 +48,13 @@ public class ModConfiguredFeatures {
         register(context, OVERWORLD_CRYONITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldCryoniteOres, 9));
 
 
-        register(context, EVERGREEN_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.EVERGREEN_LOG.get()),
-                new FancyTrunkPlacer(32, 24, 24),
-                BlockStateProvider.simple(ModBlocks.EVERGREEN_LEAVES.get()),
-                new MegaPineFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), UniformInt.of(3, 7)),
-                new TwoLayersFeatureSize(1, 1, 2))
-                .build());
+        register(context, EVERGREEN_KEY, Feature.TREE, new EvergreenTreeConfiguration.Builder().build());
+//                BlockStateProvider.simple(ModBlocks.EVERGREEN_LOG.get()),
+//                new FancyTrunkPlacer(32, 24, 24),
+//                BlockStateProvider.simple(ModBlocks.EVERGREEN_LEAVES.get()),
+//                new MegaPineFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), UniformInt.of(3, 7)),
+//                new TwoLayersFeatureSize(1, 1, 2))
+//                .build());
 
     }
 
