@@ -87,13 +87,34 @@ public class ModBlocks {
 
 
 
+
     public static final RegistryObject<Block> CRYONITE_BLOCK = registerBlock("cryonite_block", () ->
-                new Block(BlockBehaviour.Properties.of().strength(4f)
-                    .requiresCorrectToolForDrops().sound(SoundType.GILDED_BLACKSTONE).explosionResistance(10000f).ignitedByLava().friction(0.5f)));
+            new Block(BlockBehaviour.Properties.of().strength(4.5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.12f)));
 
     public static final RegistryObject<Block> CRYONITE_ORE = registerBlock("cryonite_ore", () ->
             new DropExperienceBlock(UniformInt.of(1,3),BlockBehaviour.Properties.of().strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.GILDED_BLACKSTONE).explosionResistance(10000f).ignitedByLava().friction(0.5f)));
+
+    public static final RegistryObject<Block> ICE_INFUSED_CRYONITE_BLOCK = registerBlock("ice_infused_cryonite_block", () ->
+            new Block(BlockBehaviour.Properties.of().strength(4.5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.125f)));
+
+
+    public static final RegistryObject<Block> PACKED_ICE_INFUSED_CRYONITE_BLOCK = registerBlock("packed_ice_infused_cryonite_block", () ->
+            new Block(BlockBehaviour.Properties.of().strength(4.5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.13f)));
+
+    public static final RegistryObject<Block> BLUE_ICE_INFUSED_CRYONITE_BLOCK = registerBlock("blue_ice_infused_cryonite_block", () ->
+            new Block(BlockBehaviour.Properties.of().strength(4.5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.135f)));
+
+    public static final RegistryObject<Block> CRYONITE_INFUSED_CRYONITE_BLOCK = registerBlock("cryonite_infused_cryonite_block", () ->
+            new Block(BlockBehaviour.Properties.of().strength(4.5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.15f)));
+
+
+
 
     public static final RegistryObject<Block> DEEPSLATE_CRYONITE_ORE = registerBlock("deepslate_cryonite_ore", () ->
             new DropExperienceBlock(UniformInt.of(2,5),BlockBehaviour.Properties.of().strength(4f)

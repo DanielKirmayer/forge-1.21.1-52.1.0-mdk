@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -88,6 +89,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.CRYONITE.get())
                 .define('B', Items.STICK)
                 .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModItems.CRYONITE.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ICE_INFUSED_CRYONITE_BLOCK.get())
+                .pattern("BDB")
+                .pattern("CAC")
+                .pattern("BCB")
+                .define('A', ModBlocks.CRYONITE_BLOCK.get())
+                .define('B', Blocks.ICE)
+                .define('C',Items.DIAMOND)
+                .define('D',ModItems.CRYONITE.get())
+                .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModBlocks.CRYONITE_BLOCK.get())).save(pRecipeOutput);
+
+
 
 
 

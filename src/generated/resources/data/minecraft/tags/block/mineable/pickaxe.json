@@ -4,6 +4,10 @@
     "firstmod:raw_cryonite_block",
     "firstmod:cryonite_ore",
     "firstmod:deepslate_cryonite_ore",
-    "firstmod:trumpium_block"
+    "firstmod:trumpium_block",
+    "firstmod:ice_infused_cryonite_block",
+    "firstmod:packed_ice_infused_cryonite_block",
+    "firstmod:blue_ice_infused_cryonite_block",
+    "firstmod:cryonite_infused_cryonite_block"
   ]
 }

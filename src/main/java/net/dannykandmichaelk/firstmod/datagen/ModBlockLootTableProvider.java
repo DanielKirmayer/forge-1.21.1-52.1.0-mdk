@@ -17,6 +17,7 @@ import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 
@@ -46,6 +47,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
         this.dropSelf(ModBlocks.EVERGREEN_PLANKS.get());
         this.dropSelf(ModBlocks.EVERGREEN_SAPLING.get());
+        this.dropSelf(ModBlocks.ICE_INFUSED_CRYONITE_BLOCK.get());
+        this.dropSelf(ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK.get());
+        this.dropSelf(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get());
+        this.dropSelf(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get());
+
 
         this.add(ModBlocks.EVERGREEN_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.EVERGREEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));

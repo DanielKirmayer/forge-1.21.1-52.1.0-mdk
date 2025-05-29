@@ -31,12 +31,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RAW_CRYONITE_BLOCK.get());
                         output.accept(ModBlocks.TRUMPIUM_BLOCK.get());
                         output.accept(ModBlocks.CRYONITE_BLOCK.get());
+                        output.accept(ModBlocks.ICE_INFUSED_CRYONITE_BLOCK.get());
+                        output.accept(ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK.get());
+                        output.accept(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get());
+                        output.accept(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get());
                         output.accept(ModBlocks.DEEPSLATE_CRYONITE_ORE.get());
                         output.accept(ModBlocks.CRYONITE_ORE.get());
                         output.accept(ModItems.MRDAS_SPAWN_EGG.get());
                         output.accept(ModItems.CRYONITE_SWORD.get());
                         output.accept(ModItems.CRYONITE_CLAYMORE.get());
                         output.accept(ModItems.CRYONITE_PICKAXE.get());
+
 
 
                         output.accept(ModBlocks.EVERGREEN_LOG.get());

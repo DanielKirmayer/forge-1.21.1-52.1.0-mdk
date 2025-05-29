@@ -25,6 +25,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_CRYONITE_ORE);
 
         blockWithItem(ModBlocks.TRUMPIUM_BLOCK);
+        blockWithItem(ModBlocks.ICE_INFUSED_CRYONITE_BLOCK);
+        blockWithItem(ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK);
+        blockWithItem(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK);
+        blockWithItem(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK);
+
 
 
 

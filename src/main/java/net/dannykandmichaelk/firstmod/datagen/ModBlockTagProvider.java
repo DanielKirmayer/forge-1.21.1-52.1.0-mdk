@@ -23,7 +23,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RAW_CRYONITE_BLOCK.get())
                 .add(ModBlocks.CRYONITE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_CRYONITE_ORE.get())
-                .add(ModBlocks.TRUMPIUM_BLOCK.get());
+                .add(ModBlocks.TRUMPIUM_BLOCK.get())
+                .add(ModBlocks.ICE_INFUSED_CRYONITE_BLOCK.get())
+                .add(ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK.get())
+                .add(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get())
+                .add(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get());
+
+
+
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.DEEPSLATE_CRYONITE_ORE.get());

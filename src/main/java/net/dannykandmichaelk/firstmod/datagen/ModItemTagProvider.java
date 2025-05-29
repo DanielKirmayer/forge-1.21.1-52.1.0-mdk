@@ -74,6 +74,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.CRYONITE_BOOTS.get())
                 .add(ModItems.CRYONITE_PICKAXE.get())
                 .add(ModItems.CRYONITE_SWORD.get());
+        tag(ItemTags.FIRE_ASPECT_ENCHANTABLE)
+                .add(ModItems.CRYONITE_SWORD.get());
 
 
 
