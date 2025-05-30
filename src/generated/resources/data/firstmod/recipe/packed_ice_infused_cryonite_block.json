@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "firstmod:cryonite_block"
+      "item": "firstmod:ice_infused_cryonite_block"
     },
     "B": {
-      "item": "minecraft:ice"
+      "item": "minecraft:packed_ice"
     },
     "C": {
       "item": "firstmod:cryonite"
@@ -22,6 +22,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "firstmod:ice_infused_cryonite_block"
+    "id": "firstmod:packed_ice_infused_cryonite_block"
   }
 }

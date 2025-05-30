@@ -80,7 +80,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RAW_CRYONITE_BLOCK = registerBlock("raw_cryonite_block", () ->
             new Block(BlockBehaviour.Properties.of().strength(4.5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.11f)));
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.09999f)));
 
 
 
@@ -90,7 +90,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CRYONITE_BLOCK = registerBlock("cryonite_block", () ->
             new Block(BlockBehaviour.Properties.of().strength(4.5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.12f)));
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.115f)));
 
     public static final RegistryObject<Block> CRYONITE_ORE = registerBlock("cryonite_ore", () ->
             new DropExperienceBlock(UniformInt.of(1,3),BlockBehaviour.Properties.of().strength(4f)
@@ -98,20 +98,20 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ICE_INFUSED_CRYONITE_BLOCK = registerBlock("ice_infused_cryonite_block", () ->
             new Block(BlockBehaviour.Properties.of().strength(4.5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.125f)));
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.12f)));
 
 
     public static final RegistryObject<Block> PACKED_ICE_INFUSED_CRYONITE_BLOCK = registerBlock("packed_ice_infused_cryonite_block", () ->
             new Block(BlockBehaviour.Properties.of().strength(4.5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.13f)));
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.125f)));
 
     public static final RegistryObject<Block> BLUE_ICE_INFUSED_CRYONITE_BLOCK = registerBlock("blue_ice_infused_cryonite_block", () ->
             new Block(BlockBehaviour.Properties.of().strength(4.5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.135f)));
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.13f)));
 
     public static final RegistryObject<Block> CRYONITE_INFUSED_CRYONITE_BLOCK = registerBlock("cryonite_infused_cryonite_block", () ->
             new Block(BlockBehaviour.Properties.of().strength(4.5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.15f)));
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.14f)));
 
 
 

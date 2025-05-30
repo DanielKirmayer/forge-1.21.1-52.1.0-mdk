@@ -91,16 +91,47 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModItems.CRYONITE.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ICE_INFUSED_CRYONITE_BLOCK.get())
-                .pattern("BDB")
-                .pattern("CAC")
-                .pattern("BCB")
+                .pattern("CBC")
+                .pattern("BAB")
+                .pattern("DBD")
                 .define('A', ModBlocks.CRYONITE_BLOCK.get())
                 .define('B', Blocks.ICE)
-                .define('C',Items.DIAMOND)
-                .define('D',ModItems.CRYONITE.get())
+                .define('C',ModItems.CRYONITE.get())
+                .define('D',Items.DIAMOND)
+
                 .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModBlocks.CRYONITE_BLOCK.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK.get())
+                .pattern("CBC")
+                .pattern("BAB")
+                .pattern("DBD")
+                .define('A', ModBlocks.ICE_INFUSED_CRYONITE_BLOCK.get())
+                .define('B', Blocks.PACKED_ICE)
+                .define('C',ModItems.CRYONITE.get())
+                .define('D',Items.DIAMOND)
 
+                .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModBlocks.ICE_INFUSED_CRYONITE_BLOCK.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get())
+                .pattern("CBC")
+                .pattern("BAB")
+                .pattern("DBD")
+                .define('A', ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK.get())
+                .define('B', Blocks.BLUE_ICE)
+                .define('C',ModItems.CRYONITE.get())
+                .define('D',Items.DIAMOND)
+
+                .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get())
+                .pattern("CBC")
+                .pattern("BAB")
+                .pattern("CBC")
+                .define('A', ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get())
+                .define('B', ModBlocks.CRYONITE_BLOCK.get())
+                .define('C',ModItems.CRYONITE.get())
+
+                .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get())).save(pRecipeOutput);
 
 
 

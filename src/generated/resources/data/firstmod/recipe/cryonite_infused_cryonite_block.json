@@ -3,25 +3,22 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "firstmod:cryonite_block"
+      "item": "firstmod:blue_ice_infused_cryonite_block"
     },
     "B": {
-      "item": "minecraft:ice"
+      "item": "firstmod:cryonite_block"
     },
     "C": {
       "item": "firstmod:cryonite"
-    },
-    "D": {
-      "item": "minecraft:diamond"
     }
   },
   "pattern": [
     "CBC",
     "BAB",
-    "DBD"
+    "CBC"
   ],
   "result": {
     "count": 1,
-    "id": "firstmod:ice_infused_cryonite_block"
+    "id": "firstmod:cryonite_infused_cryonite_block"
   }
 }
