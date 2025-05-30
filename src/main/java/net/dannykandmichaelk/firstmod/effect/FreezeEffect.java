@@ -1,5 +1,6 @@
 package net.dannykandmichaelk.firstmod.effect;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.Entity;
@@ -36,6 +37,8 @@ public class FreezeEffect extends MobEffect {
         x = pLivingEntity.getX();
         y = pLivingEntity.getY();
         z = pLivingEntity.getZ();
+        pLivingEntity.hasImpulse = false;
+        pLivingEntity.startSleeping(new BlockPos((int) x, (int) y, (int) z));
 
 
         pLivingEntity.teleportTo(x, y, z);
