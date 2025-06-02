@@ -41,6 +41,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CRYONITE_SWORD.get());
                         output.accept(ModItems.CRYONITE_CLAYMORE.get());
                         output.accept(ModItems.CRYONITE_PICKAXE.get());
+                        output.accept(ModItems.MJOLNIR.get());
 
 
 

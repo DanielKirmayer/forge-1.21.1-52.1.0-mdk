@@ -5,6 +5,7 @@ import net.dannykandmichaelk.firstmod.block.ModBlocks;
 import net.dannykandmichaelk.firstmod.effect.ModEffects;
 import net.dannykandmichaelk.firstmod.enchantment.ModEnchantmentEffects;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
+import net.dannykandmichaelk.firstmod.entity.client.MjolnirProjectileRenderer;
 import net.dannykandmichaelk.firstmod.entity.client.MrDasRenderer;
 import net.dannykandmichaelk.firstmod.entity.client.WerewolfRenderer;
 import net.dannykandmichaelk.firstmod.item.ModCreativeModeTabs;
@@ -90,6 +91,7 @@ public class FirstMod {
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.MRDAS.get(), MrDasRenderer::new);
             EntityRenderers.register(ModEntities.WEREWOLF.get(), WerewolfRenderer::new);
+            EntityRenderers.register(ModEntities.MJOLNIR.get(), MjolnirProjectileRenderer::new);
 
         }
     }

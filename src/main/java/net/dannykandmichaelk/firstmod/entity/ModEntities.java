@@ -1,6 +1,7 @@
 package net.dannykandmichaelk.firstmod.entity;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
+import net.dannykandmichaelk.firstmod.entity.custom.MjolnirProjectileEntity;
 import net.dannykandmichaelk.firstmod.entity.custom.MrDasEntity;
 import net.dannykandmichaelk.firstmod.entity.custom.WerewolfEntity;
 import net.minecraft.world.entity.EntityType;
@@ -20,6 +21,10 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<WerewolfEntity>> WEREWOLF =
             ENTITY_TYPES.register("werewolf", () -> EntityType.Builder.of(WerewolfEntity::new, MobCategory.CREATURE).sized(1.5f,4f).build("werewolf"));
+
+    public static final RegistryObject<EntityType<MjolnirProjectileEntity>> MJOLNIR =
+            ENTITY_TYPES.register("mjolnir", () -> EntityType.Builder.<MjolnirProjectileEntity>of(MjolnirProjectileEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 1.15f).build("mjolnir"));
 
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
