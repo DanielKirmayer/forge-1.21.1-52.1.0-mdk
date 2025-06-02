@@ -1,6 +1,7 @@
 package net.dannykandmichaelk.firstmod.block;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
+import net.dannykandmichaelk.firstmod.block.custom.ModC17H21NO4;
 import net.dannykandmichaelk.firstmod.block.custom.ModFlammableRotatedPillarBlock;
 import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.dannykandmichaelk.firstmod.worldgen.tree.ModTreeGrowers;
@@ -120,6 +121,10 @@ public class ModBlocks {
             new DropExperienceBlock(UniformInt.of(2,5),BlockBehaviour.Properties.of().strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.GILDED_BLACKSTONE).explosionResistance(10000f).ignitedByLava().friction(0.5f)));
 
+
+
+    public static final RegistryObject<Block> C17H21NO4 = BLOCKS.register("c17h21no4_crop",
+            () -> new ModC17H21NO4(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
     public static final RegistryObject<Block> TRUMPIUM_BLOCK = registerBlock("trumpium_block", () ->
             new Block(

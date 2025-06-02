@@ -5,7 +5,6 @@ import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.item.custom.ChiselItem;
 import net.dannykandmichaelk.firstmod.item.custom.FreezingWeaponItem;
 import net.dannykandmichaelk.firstmod.item.custom.ModArmorItem;
-import net.dannykandmichaelk.firstmod.item.custom.MjolnirItem;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -59,10 +58,6 @@ public class ModItems implements JukeboxSongs{
 
     public static final RegistryObject<Item> KAUPEN_BOW = ITEMS.register("kaupen_bow",
             () -> new BowItem(new Item.Properties().durability(500).jukeboxPlayable(PIGSTEP)));
-
-
-    public static final RegistryObject<Item> MJOLNIR = ITEMS.register("mjolnir",
-            () -> new MjolnirItem(new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> MRDAS_SPAWN_EGG = ITEMS.register("mrdas_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.MRDAS, 0x53524b, 0xdac741, new Item.Properties()));

@@ -38,5 +38,7 @@
   "block.firstmod.stripped_evergreen_wood": "Stripped Evergreen Wood",
   "block.firstmod.evergreen_leaves": "Evergreen Leaves",
 
-  "block.firstmod.evergreen_sapling": "Evergreen Sapling"
+  "block.firstmod.evergreen_sapling": "Evergreen Sapling",
+  "block.firstmod.c17h21no4": "Coca Colina",
+  "item.firstmod.c17h21no4_seeds": "Coca Colina Seeds"
 }

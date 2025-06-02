@@ -1,5 +1,6 @@
-// 1.21.1	2025-05-29T10:47:16.8441614	Loot Tables
+// 1.21.1	2025-06-02T10:58:11.8255251	Loot Tables
 8f4b531fd8b1798b4c5fdb7a4a7a166ff0ece09b data/firstmod/loot_table/blocks/blue_ice_infused_cryonite_block.json
+22cf2c3886443c43509073fc945b8a60384bde1a data/firstmod/loot_table/blocks/c17h21no4_crop.json
 e42dbeae2e77974c197794688e310083ae6b2f05 data/firstmod/loot_table/blocks/cryonite_block.json
 85eacd0ce2b25f0bf1035ac034ec2e5121a7d494 data/firstmod/loot_table/blocks/cryonite_infused_cryonite_block.json
 bbe6c11dbf83afdd1361e3b55409b31f9c18f03f data/firstmod/loot_table/blocks/cryonite_ore.json

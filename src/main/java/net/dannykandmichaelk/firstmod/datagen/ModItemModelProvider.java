@@ -40,6 +40,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         saplingItem(ModBlocks.EVERGREEN_SAPLING);
 
+        handheldItem(ModItems.C17H21NO4_SEEDS);
+        handheldItem(ModItems.COCA_COLINA);
+
+
+
 
 
 

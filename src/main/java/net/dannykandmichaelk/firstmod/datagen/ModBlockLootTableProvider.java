@@ -1,7 +1,9 @@
 package net.dannykandmichaelk.firstmod.datagen;
 
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
+import net.dannykandmichaelk.firstmod.block.custom.ModC17H21NO4;
 import net.dannykandmichaelk.firstmod.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -16,6 +18,8 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
@@ -51,6 +55,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK.get());
         this.dropSelf(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get());
         this.dropSelf(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get());
+
+        LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.C17H21NO4.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ModC17H21NO4.AGE, ModC17H21NO4.MAX_AGE));
+
+        this.add(ModBlocks.C17H21NO4.get(), this.createCropDrops(ModBlocks.C17H21NO4.get(),
+                ModItems.C17H21NO4_SEEDS.get(), ModItems.COCA_COLINA.get(), lootItemConditionBuilder));
 
 
         this.add(ModBlocks.EVERGREEN_LEAVES.get(), block ->
