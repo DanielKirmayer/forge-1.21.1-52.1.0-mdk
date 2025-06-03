@@ -43,6 +43,11 @@ public class ModItems implements JukeboxSongs{
             () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem. Type.BOOTS.getDurability(18))));
 
+    public static final RegistryObject<Item> C17H21NO4_SEEDS = ITEMS.register("c17h21no4_seeds",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> COCA_COLINA = ITEMS.register("coca_colina",
+            () -> new Item(new Item.Properties()));
 
 
 
