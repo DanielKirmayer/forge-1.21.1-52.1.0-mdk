@@ -6,6 +6,7 @@ import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -132,6 +133,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C',ModItems.CRYONITE.get())
 
                 .unlockedBy(getHasName(ModItems.CRYONITE.get()), has(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get())).save(pRecipeOutput);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.C17H21NO4_SEEDS.get())
+                .pattern("CBC")
+                .pattern("BAB")
+                .pattern("CBC")
+                .define('A', ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get())
+                .define('B', ModBlocks.CRYONITE_BLOCK.get())
+                .define('C',ModItems.CRYONITE.get())
+
+                .unlockedBy(getHasName(Blocks.HAY_BLOCK), has(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get())).save(pRecipeOutput);
 
 
 

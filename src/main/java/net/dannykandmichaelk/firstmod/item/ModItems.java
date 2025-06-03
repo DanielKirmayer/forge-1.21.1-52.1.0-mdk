@@ -8,6 +8,9 @@ import net.dannykandmichaelk.firstmod.item.custom.ChiselItem;
 import net.dannykandmichaelk.firstmod.item.custom.FreezingWeaponItem;
 import net.dannykandmichaelk.firstmod.item.custom.MjolnirItem;
 import net.dannykandmichaelk.firstmod.item.custom.ModArmorItem;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -19,6 +22,60 @@ import net.minecraftforge.registries.RegistryObject;
 import static net.minecraft.world.item.Items.registerItem;
 
 public class ModItems implements JukeboxSongs{
+
+
+    public static final FoodProperties FURIOUS_COCKTAIL = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationModifier(1.2F)
+            .effect(new MobEffectInstance(MobEffects.CONFUSION, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.POISON, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.ABSORPTION, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.BAD_OMEN, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.BLINDNESS, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.DARKNESS, 400, 1), 1.0F)            .effect(new MobEffectInstance(MobEffects.CONFUSION, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.DIG_SPEED, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.GLOWING, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.HARM, 0, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.HEAL, 0, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.WITHER, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.HUNGER, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.INFESTED, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.INVISIBILITY, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.JUMP, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.LEVITATION, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.LUCK, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.UNLUCK, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.HUNGER, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.OOZING, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.RAID_OMEN, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.SATURATION, 5, 1), 1.0F)            .effect(new MobEffectInstance(MobEffects.CONFUSION, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.TRIAL_OMEN, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.WATER_BREATHING, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.WEAVING, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.WIND_CHARGED, 400, 1), 1.0F)
+
+
+
+
+            .alwaysEdible()
+            .build();
+
+
+
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FirstMod.MOD_ID);
 
 
@@ -50,7 +107,7 @@ public class ModItems implements JukeboxSongs{
             () -> new ItemNameBlockItem(ModBlocks.C17H21NO4.get(),new Item.Properties()));
 
     public static final RegistryObject<Item> COCA_COLINA = ITEMS.register("coca_colina",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(FURIOUS_COCKTAIL)));
 
 
 

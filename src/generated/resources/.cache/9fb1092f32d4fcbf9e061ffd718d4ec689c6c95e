@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-03T10:02:20.8379392	Recipes
+// 1.21.1	2025-06-03T10:36:40.3402963	Recipes
 052387019277a8ed2f3e978459e903dd3b95fd40 data/firstmod/advancement/recipes/combat/cryonite_boots.json
 148204efcfa0c5d2f36a14f7a14e3c7162ad8a40 data/firstmod/advancement/recipes/combat/cryonite_chestplate.json
 d3d4daa4397ac966a90cdeb2467892d5afce68fa data/firstmod/advancement/recipes/combat/cryonite_claymore.json
@@ -7,6 +7,7 @@ d3d4daa4397ac966a90cdeb2467892d5afce68fa data/firstmod/advancement/recipes/comba
 a478f4b1ccefd6f01c8816fe0865b69a0cc35f6a data/firstmod/advancement/recipes/combat/cryonite_pickaxe.json
 dfa4e0a1f14ae6b36f3267c83c558e99389d1d4a data/firstmod/advancement/recipes/combat/cryonite_sword.json
 e1030eb7dba9900e818a63d0ea1d3349a5000171 data/firstmod/advancement/recipes/misc/blue_ice_infused_cryonite_block.json
+003972208507fa0e3868500b83a60b176cf16cb8 data/firstmod/advancement/recipes/misc/c17h21no4_seeds.json
 2663c84566384e20d30c7307ac598345ed6390dd data/firstmod/advancement/recipes/misc/cryonite.json
 7745f2878ccd3270c5008760fc18ed8173c8d416 data/firstmod/advancement/recipes/misc/cryonite_block.json
 9893e4fe6f6bc4976dd91807680e3e4e793fdb09 data/firstmod/advancement/recipes/misc/cryonite_from_blasting_cryonite_ore.json
@@ -21,6 +22,7 @@ c4fbef936497fb359662ba99e803fbe707eff75b data/firstmod/advancement/recipes/misc/
 f8e1d8729ffd3829d1a91ee0d4e10dd6743a0f0c data/firstmod/advancement/recipes/misc/trumpium.json
 fb356e054177a608f58c6d0b3eaced9c4722e38c data/firstmod/advancement/recipes/misc/trumpium_block.json
 ba4a911697ce656dd75ca2e59421a5e6121be968 data/firstmod/recipe/blue_ice_infused_cryonite_block.json
+b567a16f2ee58bd23239b4c329f269b8fa924485 data/firstmod/recipe/c17h21no4_seeds.json
 bce0c631ef436dd913602bbb128d5668534e777e data/firstmod/recipe/cryonite.json
 cdc93d6ff2e7371a0af65976f420539a4071c753 data/firstmod/recipe/cryonite_block.json
 eaf6dc507de8d60c45bb92dd1b908416abf11418 data/firstmod/recipe/cryonite_boots.json
