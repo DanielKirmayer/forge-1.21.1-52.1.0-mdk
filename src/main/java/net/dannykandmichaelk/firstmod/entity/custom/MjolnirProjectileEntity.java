@@ -13,7 +13,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec2;
 
-public class MjolnirProjectileEntity extends  AbstractArrow {
+public class MjolnirProjectileEntity extends AbstractArrow {
     private float rotation;
     public Vec2 groundedOffset;
 

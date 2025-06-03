@@ -71,7 +71,7 @@ public class ModItems implements JukeboxSongs{
             () -> new ForgeSpawnEggItem(ModEntities.MRDAS, 0x53524b, 0xdac741, new Item.Properties()));
 
     public static final RegistryObject<Item> MJOLNIR = ITEMS.register("mjolnir",
-            () -> new MjolnirItem((new Item.Properties().stacksTo(16))));
+            () -> new MjolnirItem(new Item.Properties().stacksTo(16)));
 
 
 

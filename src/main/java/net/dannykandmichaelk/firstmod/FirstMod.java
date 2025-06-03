@@ -11,6 +11,7 @@ import net.dannykandmichaelk.firstmod.entity.client.WerewolfRenderer;
 import net.dannykandmichaelk.firstmod.item.ModCreativeModeTabs;
 import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.dannykandmichaelk.firstmod.sound.ModSounds;
+import net.dannykandmichaelk.firstmod.villager.ModVillagers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -48,6 +49,7 @@ public class FirstMod {
         ModSounds.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
         ModEffects.MOB_EFFECTS.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         // Register the item to a creative tab
 //        modEventBus.addListener(this::addCreative);
