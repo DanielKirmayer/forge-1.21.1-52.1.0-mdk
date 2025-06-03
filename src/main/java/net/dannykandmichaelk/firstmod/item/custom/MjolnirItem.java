@@ -23,9 +23,9 @@ public class MjolnirItem extends Item {
             pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(),
                     SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F));
             if (!pLevel.isClientSide) {
-                MjolnirProjectileEntity MjolnirProjectile = new MjolnirProjectileEntity(pPlayer, pLevel);
-                MjolnirProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0F);
-                pLevel.addFreshEntity(MjolnirProjectile);
+                MjolnirProjectileEntity mjolnirProjectile = new MjolnirProjectileEntity(pPlayer, pLevel);
+                mjolnirProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0F);
+                pLevel.addFreshEntity(mjolnirProjectile);
             }
 
             pPlayer.awardStat(Stats.ITEM_USED.get(this));

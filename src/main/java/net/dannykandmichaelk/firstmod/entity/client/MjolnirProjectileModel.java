@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class MjolnirProjectileModel extends EntityModel<MjolnirProjectileEntity> {
 
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "mjolnir"), "main");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID,"mjolnir"), "main");
     private final ModelPart mjolnir;
 
     public MjolnirProjectileModel(ModelPart root) {
