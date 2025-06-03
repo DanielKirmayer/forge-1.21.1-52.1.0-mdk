@@ -1,6 +1,8 @@
 package net.dannykandmichaelk.firstmod.item;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
+import net.dannykandmichaelk.firstmod.block.ModBlocks;
+import net.dannykandmichaelk.firstmod.block.custom.ModC17H21NO4;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.item.custom.ChiselItem;
 import net.dannykandmichaelk.firstmod.item.custom.FreezingWeaponItem;
@@ -45,7 +47,7 @@ public class ModItems implements JukeboxSongs{
                     new Item.Properties().durability(ArmorItem. Type.BOOTS.getDurability(18))));
 
     public static final RegistryObject<Item> C17H21NO4_SEEDS = ITEMS.register("c17h21no4_seeds",
-            () -> new Item(new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.C17H21NO4.get(),new Item.Properties()));
 
     public static final RegistryObject<Item> COCA_COLINA = ITEMS.register("coca_colina",
             () -> new Item(new Item.Properties()));
