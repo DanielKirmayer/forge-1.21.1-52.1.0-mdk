@@ -65,7 +65,8 @@ public class MjolnirProjectileEntity extends AbstractArrow {
             rayofBoltsLine();
             boltsSpawned++;
         }
-        super.onHitBlock(result);
+
+
 
         if (result.getDirection() == Direction.SOUTH) {
             groundedOffset = new Vec2(215f, 180f);
@@ -83,18 +84,30 @@ public class MjolnirProjectileEntity extends AbstractArrow {
             groundedOffset = new Vec2(115f, 180f);
         }
         if (result.getDirection() == Direction.UP) {
-            groundedOffset = new Vec2(285f, 180f);
+            System.out.println(playerRot);
+            groundedOffset = new Vec2(300f, -162f);
         }
+
+        super.onHitBlock(result);
 
 
     }
 
     public void rayofBoltsLine() {
+        double radians = Math.toRadians(playerRot);
+
+        double dirX = -Math.sin(radians); // -sin because of Minecraft's coordinate system
+        double dirZ = Math.cos(radians);
+
+        double currX = this.getX();
+        double currZ = this.getZ();
             for (int i = 0; i < 10; i++) {
+                currX += dirX;
+                currZ += dirZ;
                 LightningBolt bolt = EntityType.LIGHTNING_BOLT.create(this.level());
                 if (bolt != null)
                 {
-                        bolt.moveTo(this.getX() + i, this.getY(), this.getZ() - i, playerRot, 0.0F);
+                        bolt.moveTo(currX, this.getY(), currZ, 0.0F, 0.0F);
                 }
                     this.level().addFreshEntity(bolt);
                 }

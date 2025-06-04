@@ -12,6 +12,7 @@ import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import net.minecraft.world.phys.Vec2;
 
 public class MjolnirProjectileRenderer extends EntityRenderer<MjolnirProjectileEntity> {
 
@@ -31,9 +32,9 @@ public class MjolnirProjectileRenderer extends EntityRenderer<MjolnirProjectileE
             poseStack.mulPose(Axis.XP.rotationDegrees(pEntity.getRenderingRotation() * 5f));
             poseStack.translate(0, -1.0f, 0);
         } else {
-            poseStack.mulPose(Axis.YP.rotationDegrees(pEntity.groundedOffset.y));
+            poseStack.mulPose(Axis.YP.rotationDegrees(pEntity.yRotO));
             poseStack.mulPose(Axis.XP.rotationDegrees(pEntity.groundedOffset.x));
-            poseStack.translate(0, -1.0f, 0);
+            poseStack.translate(0, 0f, 0);
         }
 
         VertexConsumer vertexconsumer = ItemRenderer.getFoilBufferDirect(
