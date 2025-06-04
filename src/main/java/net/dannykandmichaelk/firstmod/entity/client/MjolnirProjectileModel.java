@@ -24,19 +24,13 @@ public class MjolnirProjectileModel extends EntityModel<MjolnirProjectileEntity>
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition mjolnir = partdefinition.addOrReplaceChild("mjolnir", CubeListBuilder.create(), PartPose.offset(0.0F, 16.5F, 0.0F));
+        PartDefinition mjolnir = partdefinition.addOrReplaceChild("mjolnir", CubeListBuilder.create().texOffs(0, 32).addBox(-13.0F, -27.05F, 0.5F, 8.0F, 8.0F, 14.0F, new CubeDeformation(0.0F))
+                .texOffs(14, 19).addBox(-10.0F, -18.0F, 6.5F, 2.0F, 10.0F, 2.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 15).addBox(-11.0F, -8.0F, 5.5F, 4.0F, 2.0F, 4.0F, new CubeDeformation(0.0F))
+                .texOffs(17, 14).addBox(-11.0F, -19.0F, 5.5F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F))
+                .texOffs(17, 14).addBox(-11.0F, -28.0F, 5.5F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 
-        PartDefinition cube_r1 = mjolnir.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(8, 7).addBox(1.5F, 2.5F, -0.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -7.0F, -4.0F, 0.0F, -1.5708F, 0.0F));
-
-        PartDefinition cube_r2 = mjolnir.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(7, 9).addBox(0.5F, -1.5F, -0.5F, 2.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -7.0F, -5.0F, 0.0F, -1.5708F, 0.0F));
-
-        PartDefinition cube_r3 = mjolnir.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(3, 10).addBox(-2.5F, -1.5F, -0.5F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -7.0F, 5.0F, 0.0F, -1.5708F, 0.0F));
-
-        PartDefinition cube_r4 = mjolnir.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(1, 4).addBox(-2.5F, -1.5F, 0.0F, 5.0F, 3.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -7.0F, 0.0F, 0.0F, -1.5708F, 0.0F));
-
-        PartDefinition cube_r5 = mjolnir.addOrReplaceChild("cube_r5", CubeListBuilder.create().texOffs(18, 1).addBox(-0.5F, -9.0F, -0.5F, 1.0F, 18.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -1.5F, 0.0F, 0.0F, -0.7854F, 0.0F));
-
-        return LayerDefinition.create(meshdefinition, 32, 32);
+        return LayerDefinition.create(meshdefinition, 64, 64);
     }
 
     @Override

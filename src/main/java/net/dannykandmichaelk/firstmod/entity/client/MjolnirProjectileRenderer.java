@@ -45,6 +45,6 @@ public class MjolnirProjectileRenderer extends EntityRenderer<MjolnirProjectileE
 
     @Override
     public ResourceLocation getTextureLocation(MjolnirProjectileEntity entity) {
-        return ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "textures/entity/mjolnir/mjolnir.png");
+        return ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "textures/entity/mjolnir/mjolnir1.png");
     }
 }
