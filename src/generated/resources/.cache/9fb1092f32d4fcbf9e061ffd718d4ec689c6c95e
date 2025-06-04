@@ -1,7 +1,7 @@
-// 1.21.1	2025-06-03T10:36:40.3402963	Recipes
+// 1.21.1	2025-06-04T11:02:01.6185086	Recipes
 052387019277a8ed2f3e978459e903dd3b95fd40 data/firstmod/advancement/recipes/combat/cryonite_boots.json
 148204efcfa0c5d2f36a14f7a14e3c7162ad8a40 data/firstmod/advancement/recipes/combat/cryonite_chestplate.json
-d3d4daa4397ac966a90cdeb2467892d5afce68fa data/firstmod/advancement/recipes/combat/cryonite_claymore.json
+a066ed01236790f0e59c933f024ecb2ab46db6fb data/firstmod/advancement/recipes/combat/cryonite_claymore1.json
 0effd07fb2551543d3d6a5ffaf029979ae0f64ca data/firstmod/advancement/recipes/combat/cryonite_helmet.json
 8f9dcedb2892a4c8b145d410c110edc62f2d8b49 data/firstmod/advancement/recipes/combat/cryonite_leggings.json
 a478f4b1ccefd6f01c8816fe0865b69a0cc35f6a data/firstmod/advancement/recipes/combat/cryonite_pickaxe.json
@@ -27,7 +27,7 @@ bce0c631ef436dd913602bbb128d5668534e777e data/firstmod/recipe/cryonite.json
 cdc93d6ff2e7371a0af65976f420539a4071c753 data/firstmod/recipe/cryonite_block.json
 eaf6dc507de8d60c45bb92dd1b908416abf11418 data/firstmod/recipe/cryonite_boots.json
 c20610823be85db64d7b2ad5d4a6ffdc3cc3162a data/firstmod/recipe/cryonite_chestplate.json
-32ee82ccb5404cb27d2abd795632a019c9ca8167 data/firstmod/recipe/cryonite_claymore.json
+f5557dceaecbda07891ad9cb83c9540e47d78c42 data/firstmod/recipe/cryonite_claymore1.json
 61024a038b978f93b567e9def0d67a7a125e9329 data/firstmod/recipe/cryonite_from_blasting_cryonite_ore.json
 99141566c2fed5e70793fc215f47a000b8657e23 data/firstmod/recipe/cryonite_from_blasting_deepslate_cryonite_ore.json
 6a926c4a6fbca587eef39f805516fedda58c8a97 data/firstmod/recipe/cryonite_from_blasting_raw_cryonite.json
