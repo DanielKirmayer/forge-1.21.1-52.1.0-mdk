@@ -183,7 +183,8 @@ public class MrDasEntity extends Ghast implements  NeutralMob {
                 .add(Attributes.FALL_DAMAGE_MULTIPLIER,0)
                 .add(Attributes.STEP_HEIGHT, 2.0)
                 .add(Attributes.FOLLOW_RANGE,1000)
-                .add(Attributes.SCALE, 5F);
+                .add(Attributes.SCALE, 5F)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 2F);
     }
 
     @Override
