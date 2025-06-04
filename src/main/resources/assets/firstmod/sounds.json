@@ -118,5 +118,13 @@
     "sounds": [
       "firstmod:das_hit_20"
     ]
+  },
+  "barney_mixtape": {
+    "sounds": [
+      {
+        "name": "firstmod:barney_mixtape",
+        "stream": true
+      }
+    ]
   }
 }

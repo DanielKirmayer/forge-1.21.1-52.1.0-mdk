@@ -42,6 +42,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ModItems.C17H21NO4_SEEDS);
         handheldItem(ModItems.COCA_COLINA);
+        basicItem(ModItems.BARNEY_DISC.get());
 
 
 

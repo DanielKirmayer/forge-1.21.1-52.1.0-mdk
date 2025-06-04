@@ -8,6 +8,7 @@ import net.dannykandmichaelk.firstmod.item.custom.ChiselItem;
 import net.dannykandmichaelk.firstmod.item.custom.FreezingWeaponItem;
 import net.dannykandmichaelk.firstmod.item.custom.MjolnirItem;
 import net.dannykandmichaelk.firstmod.item.custom.ModArmorItem;
+import net.dannykandmichaelk.firstmod.sound.ModSounds;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -129,6 +130,9 @@ public class ModItems implements JukeboxSongs{
 
     public static final RegistryObject<Item> MJOLNIR = ITEMS.register("mjolnir1",
             () -> new MjolnirItem(new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> BARNEY_DISC = ITEMS.register("barney_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.BARNEY_MIXTAPE_KEY)));
 
 
 
