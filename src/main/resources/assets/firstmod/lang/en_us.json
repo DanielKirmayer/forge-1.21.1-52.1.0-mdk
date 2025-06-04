@@ -9,8 +9,8 @@
   "item.firstmod.cryonite_boots" : "Cryonite Boots",
   "item.firstmod.cryonite_sword" : "Cryonite Sword",
   "item.firstmod.cryonite_pickaxe" : "Cryonite Pickaxe",
-  "item.firstmod.cryonite_claymore" : "Cryonite Claymore",
-  "item.firstmod.mjolnir": "Mjolnir",
+  "item.firstmod.cryonite_claymore1" : "Cryonite Claymore",
+  "item.firstmod.mjolnir1": "Mjolnir",
 
   "block.firstmod.raw_cryonite_block": "Block of Raw Cryonite",
   "block.firstmod.trumpium_block": "Block of Trumpium",
@@ -29,7 +29,8 @@
   "entity.firstmod.werewolf": "Giga Werewolf",
   "enchantment.firstmod.lightning_striker": "Lightning Striker",
   "item.firstmod.kaupen_bow": "Daniel Bow",
-  "entity.firstmod.mjolnir": "Mjolnir",
+  "entity.firstmod.mjolnir1": "Mjolnir",
+  "entity.minecraft.villager.firstmod.alfa_jefe_scary": "Alfa Jefe",
 
   "block.firstmod.evergreen_log": "Evergreen Log",
   "block.firstmod.evergreen_planks": "Evergreen Planks",

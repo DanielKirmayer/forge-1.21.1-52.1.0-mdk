@@ -27,7 +27,7 @@ public class MjolnirProjectileEntity extends AbstractArrow {
 
     public MjolnirProjectileEntity(LivingEntity shooter, Level level) {
         super(ModEntities.MJOLNIR.get(), shooter, level, new ItemStack(ModItems.MJOLNIR.get()), null);
-        playerRot = shooter.getXRot();
+        playerRot = shooter.getYRot();
     }
 
     @Override
@@ -62,7 +62,7 @@ public class MjolnirProjectileEntity extends AbstractArrow {
     @Override
     protected void onHitBlock(BlockHitResult result) {
         if (boltsSpawned < 1) {
-            rayofBolts(result);
+            rayofBoltsLine();
             boltsSpawned++;
         }
         super.onHitBlock(result);
@@ -89,25 +89,15 @@ public class MjolnirProjectileEntity extends AbstractArrow {
 
     }
 
-    public void rayofBolts(BlockHitResult result) {
+    public void rayofBoltsLine() {
             for (int i = 0; i < 10; i++) {
                 LightningBolt bolt = EntityType.LIGHTNING_BOLT.create(this.level());
-                if (bolt != null) {
-                    if (playerRot > 180) {
-                        bolt.moveTo(this.getX(), this.getY(), this.getZ() - i, this.getYRot(), 0.0F);
-                    }
-                    if (playerRot < 180) {
-                        bolt.moveTo(this.getX(), this.getY(), this.getZ() + i, this.getYRot(), 0.0F);
-                    }
-//                    if (result.getDirection() == Direction.EAST) {
-//                        bolt.moveTo(this.getX() + i, this.getY(), this.getZ(), this.getYRot(), 0.0F);
-//                    }
-//                    if (result.getDirection() == Direction.WEST) {
-//                        bolt.moveTo(this.getX() - i, this.getY(), this.getZ() - i, this.getYRot(), 0.0F);
-//                    }
-//                    bolt.moveTo(this.getX() - i, this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                if (bolt != null)
+                {
+                        bolt.moveTo(this.getX() + i, this.getY(), this.getZ() - i, playerRot, 0.0F);
+                }
                     this.level().addFreshEntity(bolt);
                 }
             }
+
     }
-}

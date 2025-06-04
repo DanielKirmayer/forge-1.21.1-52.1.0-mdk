@@ -21,8 +21,8 @@ public class ModVillagers {
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
-    public static final RegistryObject<VillagerProfession> ALFA_JEFE = VILLAGER_PROFESSIONS.register("alfa_jefe",
-            () -> new VillagerProfession("alfa_jefe", holder -> holder.value() == JEFE_POI.get(),
+    public static final RegistryObject<VillagerProfession> ALFA_JEFE = VILLAGER_PROFESSIONS.register("alfa_jefe_scary",
+            () -> new VillagerProfession("alfa_jefe_scary", holder -> holder.value() == JEFE_POI.get(),
                     holder -> holder.value() == JEFE_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     ModSounds.DAS_HIT_19.get()));
 

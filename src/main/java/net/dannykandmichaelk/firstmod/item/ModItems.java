@@ -115,7 +115,7 @@ public class ModItems implements JukeboxSongs{
     public static final RegistryObject<Item> CRYONITE_SWORD = ITEMS.register("cryonite_sword",
             () -> new SwordItem(ModToolTiers.CRYONITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.CRYONITE,5,-.5f))));
 
-    public static final RegistryObject<Item> CRYONITE_CLAYMORE = ITEMS.register( "cryonite_claymore",
+    public static final RegistryObject<Item> CRYONITE_CLAYMORE = ITEMS.register( "cryonite_claymore1",
             () -> new FreezingWeaponItem(ModToolTiers.CRYONITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.CRYONITE, 10, -2f))));
 
     public static final RegistryObject<Item> CRYONITE_PICKAXE = ITEMS.register("cryonite_pickaxe",
