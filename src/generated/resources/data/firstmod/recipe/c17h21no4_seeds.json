@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "firstmod:blue_ice_infused_cryonite_block"
+    },
+    "B": {
+      "item": "firstmod:cryonite_block"
+    },
+    "C": {
+      "item": "firstmod:cryonite"
+    }
+  },
+  "pattern": [
+    "CBC",
+    "BAB",
+    "CBC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "firstmod:c17h21no4_seeds"
+  }
+}

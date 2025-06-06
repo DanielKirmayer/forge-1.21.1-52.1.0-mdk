@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "firstmod:cryonite_block"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "A",
+    "A",
+    "C"
+  ],
+  "result": {
+    "count": 1,
+    "id": "firstmod:cryonite_claymore1"
+  }
+}

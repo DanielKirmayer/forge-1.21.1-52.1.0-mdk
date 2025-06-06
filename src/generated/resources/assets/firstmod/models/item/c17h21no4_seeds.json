@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "firstmod:item/c17h21no4_seeds"
+  }
+}
