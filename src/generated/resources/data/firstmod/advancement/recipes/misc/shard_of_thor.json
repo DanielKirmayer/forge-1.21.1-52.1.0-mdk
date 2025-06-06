@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "firstmod:shard_of_thor"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_weakened_shard_of_thor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "firstmod:weakened_shard_of_thor"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_weakened_shard_of_thor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "firstmod:shard_of_thor"
+    ]
+  }
+}

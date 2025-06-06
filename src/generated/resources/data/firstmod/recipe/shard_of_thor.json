@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "firstmod:cryonite"
+    },
+    "B": {
+      "item": "firstmod:cryonite_block"
+    },
+    "C": {
+      "item": "firstmod:weakened_shard_of_thor"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "firstmod:shard_of_thor"
+  }
+}

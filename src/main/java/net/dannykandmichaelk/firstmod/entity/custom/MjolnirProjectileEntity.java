@@ -24,8 +24,6 @@ public class MjolnirProjectileEntity extends AbstractArrow {
     private int boltsSpawned = 0;
     private float playerXRot;
     private float playerYRot;
-    private int ticksWaited = 0;
-    private final int delayTicks = 10;
 
     public MjolnirProjectileEntity(EntityType<? extends AbstractArrow> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -66,16 +64,16 @@ public class MjolnirProjectileEntity extends AbstractArrow {
         double z = Mth.cos(playerYRot * ((float) Math.PI / 180F)) * Mth.cos(playerXRot * ((float) Math.PI / 180F));
         Vec3 direction = new Vec3(x, y, z).normalize();
 
-        double horizontalScale = 5;
+        double horizontalScale = 4;
         double verticalScale = 2.5;
-        // Increase launch force: horizontal x2.5, vertical x1.2
+        // Increase launch force: horizontal x4, vertical x2.5
         Vec3 launchVelocity = new Vec3(direction.x * horizontalScale, direction.y * verticalScale, direction.z * horizontalScale);
         entity.setDeltaMovement(launchVelocity);
         entity.hurtMarked = true;
 
         if (!this.level().isClientSide) {
-            // Start lightning follower that strikes ground under entity for 10 ticks
-
+            LightningStrikeEntity tracker = new LightningStrikeEntity(this.level(), entity, 10);
+            this.level().addFreshEntity(tracker);
 
             this.level().broadcastEntityEvent(this, (byte) 3);
             this.discard();

@@ -2,18 +2,13 @@ package net.dannykandmichaelk.firstmod.item;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
-import net.dannykandmichaelk.firstmod.block.custom.ModC17H21NO4;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
-import net.dannykandmichaelk.firstmod.item.custom.ChiselItem;
-import net.dannykandmichaelk.firstmod.item.custom.FreezingWeaponItem;
-import net.dannykandmichaelk.firstmod.item.custom.MjolnirItem;
-import net.dannykandmichaelk.firstmod.item.custom.ModArmorItem;
+import net.dannykandmichaelk.firstmod.item.custom.*;
 import net.dannykandmichaelk.firstmod.sound.ModSounds;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -90,7 +85,7 @@ public class ModItems implements JukeboxSongs{
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SUPER_CHISEL = ITEMS.register("super_chisel",
-            () -> new ChiselItem(new Item.Properties().durability(50)));
+            () -> new WeakUnstableItem(new Item.Properties().durability(50)));
     public static final RegistryObject<Item> CRYONITE_HELMET = ITEMS.register("cryonite_helmet",
             () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem. Type.HELMET.getDurability(18))));
@@ -111,7 +106,10 @@ public class ModItems implements JukeboxSongs{
             () -> new Item(new Item.Properties().food(FURIOUS_COCKTAIL)));
 
     public static final RegistryObject<Item> WEAKENED_SHARD_OF_THOR = ITEMS.register("weakened_shard_of_thor",
-            () -> new ChiselItem(new Item.Properties().durability(10)));
+            () -> new WeakUnstableItem(new Item.Properties().durability(5)));
+
+    public static final RegistryObject<Item> SHARD_OF_THOR = ITEMS.register("shard_of_thor",
+            () -> new UnstableItem(new Item.Properties()));
 
 
 

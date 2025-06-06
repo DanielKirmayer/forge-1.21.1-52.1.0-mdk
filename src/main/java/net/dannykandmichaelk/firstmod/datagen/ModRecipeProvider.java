@@ -41,6 +41,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.TRUMPIUM.get()), has(ModItems.TRUMPIUM.get())).save(pRecipeOutput);
 
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SHARD_OF_THOR.get())
+                        .pattern("ABA")
+                        .pattern("BCB")
+                        .pattern("ABA")
+                        .define('A', ModItems.CRYONITE.get())
+                        .define('B', ModBlocks.CRYONITE_BLOCK.get())
+                        .define('C', ModItems.WEAKENED_SHARD_OF_THOR.get())
+                        .unlockedBy(getHasName(ModItems.WEAKENED_SHARD_OF_THOR.get()), has(ModItems.WEAKENED_SHARD_OF_THOR.get())).save(pRecipeOutput);
+
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CRYONITE_SWORD.get())
                         .pattern("A")

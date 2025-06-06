@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.firstmod.barney_mixtape.desc"
+  },
+  "length_in_seconds": 3000,
+  "sound_event": "firstmod:barney_mixtape"
+}
