@@ -104,7 +104,6 @@ public class MjolnirProjectileEntity extends AbstractArrow {
             groundedOffset = new Vec2(115f, 180f);
         }
         if (result.getDirection() == Direction.UP) {
-            System.out.println(playerXRot);
             groundedOffset = new Vec2(300f, -162f);
         }
 

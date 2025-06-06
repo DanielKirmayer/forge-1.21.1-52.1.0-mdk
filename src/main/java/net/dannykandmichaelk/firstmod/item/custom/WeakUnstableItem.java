@@ -123,6 +123,6 @@ public class WeakUnstableItem extends Item {
         super.appendHoverText(pStack, null, pTooltipComponents, pTooltipFlag);
 
         pTooltipComponents.add(Component.literal("WARNING: THIS SHARD IS SOMEWHAT UNSTABLE" +
-                        " AND MAY RESULT IN SOME DESTRUCTION\"").withStyle(ChatFormatting.RED));
+                        " AND MAY RESULT IN SOME DESTRUCTION").withStyle(ChatFormatting.RED));
     }
 }

@@ -1,5 +1,6 @@
 package net.dannykandmichaelk.firstmod.item.custom;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -147,20 +148,22 @@ public class UnstableItem extends Item {
         super.appendHoverText(pStack, null, pTooltipComponents, pTooltipFlag);
       String text ="WARNING: THIS SHARD IS EXTREMELY UNSTABLE" +
               " AND WILL DESTROY EVERYTHING NEAR YOU IF YOU PUT IT IN YOUR HOTBAR";
+        String[] words = text.split(" ");
 
-        int[] rainbowColors = {
-                0xFFFF00, // yellow
-                0x0000FF, // blue
-        };
 
-        MutableComponent coloredText = Component.literal("");
-        String[] textSplit = text.split(" ");
 
-        for (int i = 0; i < textSplit.length; i++) {
-            int color = rainbowColors[i % rainbowColors.length];
-            coloredText.append(Component.literal(String.valueOf(textSplit[i]) + " ").withStyle(style -> style.withColor(color)));
+        long time = System.currentTimeMillis() / 500; // Changes every ~0.5 seconds
+        int cycleOffset = (int) (time % words.length);
+
+        MutableComponent animatedTooltip = Component.empty();
+
+        for (int i = 0; i < words.length; i++) {
+            ChatFormatting color = ((i + cycleOffset) % 2 == 0) ? ChatFormatting.YELLOW : ChatFormatting.BLUE;
+            animatedTooltip.append(Component.literal(words[i] + " ").withStyle(style -> style
+                    .withColor(color)
+                    .withBold(true)));
         }
 
-        pTooltipComponents.add(coloredText);
+        pTooltipComponents.add(animatedTooltip);
     }
 }
