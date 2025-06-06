@@ -39,7 +39,7 @@ public class ModSounds {
 
 
 
-    public static final RegistryObject<SoundEvent> BAR_BRAWL = registerSoundEvent("barney_mixtape");
+    public static final RegistryObject<SoundEvent> BARNEY_MIXTAPE = registerSoundEvent("barney_mixtape");
     public static final ResourceKey<JukeboxSong> BARNEY_MIXTAPE_KEY= ResourceKey.create(Registries.JUKEBOX_SONG,
             ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "barney_mixtape"));
 
