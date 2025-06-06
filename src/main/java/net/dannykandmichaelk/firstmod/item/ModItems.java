@@ -110,6 +110,9 @@ public class ModItems implements JukeboxSongs{
     public static final RegistryObject<Item> COCA_COLINA = ITEMS.register("coca_colina",
             () -> new Item(new Item.Properties().food(FURIOUS_COCKTAIL)));
 
+    public static final RegistryObject<Item> WEAKENED_SHARD_OF_THOR = ITEMS.register("weakened_shard_of_thor",
+            () -> new ChiselItem(new Item.Properties().durability(10)));
+
 
 
 

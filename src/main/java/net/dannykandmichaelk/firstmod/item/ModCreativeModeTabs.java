@@ -59,6 +59,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.C17H21NO4_SEEDS.get());
                         output.accept(ModItems.COCA_COLINA.get());
                         output.accept(ModItems.BARNEY_DISC.get());
+                        output.accept(ModItems.WEAKENED_SHARD_OF_THOR.get());
 
                     }).build());
 

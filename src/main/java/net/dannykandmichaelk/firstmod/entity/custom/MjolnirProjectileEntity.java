@@ -75,8 +75,7 @@ public class MjolnirProjectileEntity extends AbstractArrow {
 
         if (!this.level().isClientSide) {
             // Start lightning follower that strikes ground under entity for 10 ticks
-            LightningStrikeEntity tracker = new LightningStrikeEntity(this.level(), entity, 10);
-            this.level().addFreshEntity(tracker);
+
 
             this.level().broadcastEntityEvent(this, (byte) 3);
             this.discard();

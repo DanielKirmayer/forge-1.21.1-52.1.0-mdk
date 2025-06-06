@@ -6,6 +6,7 @@ import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.dannykandmichaelk.firstmod.villager.ModVillagers;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.ItemCost;
@@ -29,14 +30,8 @@ public class ModEvents {
                     new ItemStack(ModItems.C17H21NO4_SEEDS.get(), 1), 6, 4, 0.05f));
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemCost(Items.DIAMOND, 64),
-                    new ItemStack(ModItems.MJOLNIR.get(), 16), 100, 4, 0.05f));
-
-            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemCost(Items.EMERALD, 46),
-                    new ItemStack(ModItems.TRUMPIUM.get(), 1), 100, 4, 0.05f));
-
-
+                    new ItemCost(Item.byId((int) (Math.random() * (800) + 0)), 50),
+                    new ItemStack(ModItems.WEAKENED_SHARD_OF_THOR.get(), 1), 1, 4000, 0.05f));
         }
     }
 
