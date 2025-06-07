@@ -154,9 +154,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
                 .unlockedBy(getHasName(Blocks.HAY_BLOCK), has(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get())).save(pRecipeOutput);
 
-
-
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRYONITE_WORKBENCH.get())
+                .pattern("BBB")
+                .pattern("BAB")
+                .pattern("BBB")
+                .define('A', Blocks.CRAFTING_TABLE)
+                .define('B', ModBlocks.CRYONITE_BLOCK.get());
 
 
 

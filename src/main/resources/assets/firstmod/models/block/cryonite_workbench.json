@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "firstmod:block/cryonite_workbench_side",
+    "bottom": "firstmod:block/cryonite_workbench_top",
+    "top": "firstmod:block/cryonite_workbench_top"
+  }
+}

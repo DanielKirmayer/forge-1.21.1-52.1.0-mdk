@@ -114,6 +114,10 @@ public class ModBlocks {
             new Block(BlockBehaviour.Properties.of().strength(4.5f)
                     .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.14f)));
 
+    public static RegistryObject<Block> CRYONITE_WORKBENCH = registerBlock("cryonite_workbench", () ->
+            new Block(BlockBehaviour.Properties.of().strength(5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.GILDED_BLACKSTONE).explosionResistance(10000f)));
+
 
 
 

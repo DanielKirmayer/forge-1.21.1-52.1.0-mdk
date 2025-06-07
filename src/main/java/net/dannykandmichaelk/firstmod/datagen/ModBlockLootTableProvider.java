@@ -55,6 +55,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK.get());
         this.dropSelf(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get());
         this.dropSelf(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get());
+        this.dropSelf(ModBlocks.CRYONITE_WORKBENCH.get());
 
         LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.C17H21NO4.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ModC17H21NO4.AGE, ModC17H21NO4.MAX_AGE));

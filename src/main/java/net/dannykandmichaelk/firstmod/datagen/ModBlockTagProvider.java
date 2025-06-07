@@ -27,7 +27,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ICE_INFUSED_CRYONITE_BLOCK.get())
                 .add(ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK.get())
                 .add(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get())
-                .add(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get());
+                .add(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get())
+                .add(ModBlocks.CRYONITE_WORKBENCH.get());
 
 
 

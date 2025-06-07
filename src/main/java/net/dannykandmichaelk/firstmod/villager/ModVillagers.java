@@ -18,7 +18,7 @@ public class ModVillagers {
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, FirstMod.MOD_ID);
 
     public static final RegistryObject<PoiType> JEFE_POI = POI_TYPES.register("jefe_poi",
-            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get().getStateDefinition().getPossibleStates()),
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.CRYONITE_WORKBENCH.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
     public static final RegistryObject<VillagerProfession> ALFA_JEFE = VILLAGER_PROFESSIONS.register("alfa_jefe_scary",

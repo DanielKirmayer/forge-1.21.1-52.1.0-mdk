@@ -1,6 +1,6 @@
-// 1.21.1	2025-05-29T10:47:16.8441614	Tags for minecraft:block mod id firstmod
+// 1.21.1	2025-06-06T20:29:57.6321503	Tags for minecraft:block mod id firstmod
 895e9941a3b691d7c700d602cc842b3ce6c4772a data/minecraft/tags/block/logs_that_burn.json
-22fccf168636797408ced610cc3b7b9303b853ec data/minecraft/tags/block/mineable/pickaxe.json
+8dc5b917d0d95f13770cb00b29b06a79ae2dcc5d data/minecraft/tags/block/mineable/pickaxe.json
 e0143a537910e93fed75cfb0c472c18cdf057cc4 data/minecraft/tags/block/needs_diamond_tool.json
 c4763433b39a5463f04c1f806ee00479e23dc0d4 data/minecraft/tags/block/needs_iron_tool.json
 e0143a537910e93fed75cfb0c472c18cdf057cc4 data/minecraft/tags/block/piglin_repellents.json

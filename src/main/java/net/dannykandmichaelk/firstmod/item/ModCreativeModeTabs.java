@@ -57,6 +57,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.EVERGREEN_LEAVES.get());
 
                         output.accept(ModBlocks.C17H21NO4.get());
+                        output.accept(ModBlocks.CRYONITE_WORKBENCH.get());
                         output.accept(ModItems.C17H21NO4_SEEDS.get());
                         output.accept(ModItems.COCA_COLINA.get());
                         output.accept(ModItems.BARNEY_DISC.get());

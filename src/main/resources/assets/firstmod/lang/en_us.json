@@ -24,9 +24,10 @@
   "block.firstmod.cryonite_infused_cryonite_block": "Block of Cryonite Infused Cryonite",
   "block.firstmod.cryonite_ore": "Cryonite Ore",
   "block.firstmod.deepslate_cryonite_ore": "Deepslate Cryonite Ore",
+  "block.firstmod.cryonite_workbench": "Cryonite Workbench",
+
+
   "item.firstmod.mrdas_spawn_egg": "Mr Das Spawn Egg",
-
-
   "creativetab.firstmod.sigma_items": "Sigma Items",
   "entity.firstmod.mrdas": "Mr Das",
   "entity.firstmod.werewolf": "Giga Werewolf",
