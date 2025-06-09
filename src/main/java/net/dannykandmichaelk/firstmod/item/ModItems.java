@@ -7,6 +7,7 @@ import net.dannykandmichaelk.firstmod.item.custom.*;
 import net.dannykandmichaelk.firstmod.sound.ModSounds;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -63,6 +64,34 @@ public class ModItems implements JukeboxSongs{
             .effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 1), 1.0F)
             .effect(new MobEffectInstance(MobEffects.WEAVING, 400, 1), 1.0F)
             .effect(new MobEffectInstance(MobEffects.WIND_CHARGED, 400, 1), 1.0F)
+
+
+
+
+            .alwaysEdible()
+            .build();
+
+    public static final FoodProperties CRYONITE_STEAK_PROPS = new FoodProperties.Builder()
+            .nutrition(9)
+            .saturationModifier(1.2F)
+            .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 3), 1.0F)
+
+
+
+
+
+            .build();
+
+
+    public static final FoodProperties CRYONITE_GAPPLE_PROPS = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationModifier(1.2F)
+            .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 5), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.ABSORPTION, 400, 5), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 400, 5), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.LEVITATION,400,2),1.0F)
+
+
 
 
 
@@ -134,6 +163,12 @@ public class ModItems implements JukeboxSongs{
 
     public static final RegistryObject<Item> BARNEY_DISC = ITEMS.register("barney_disc",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.BARNEY_MIXTAPE_KEY)));
+
+    public static final RegistryObject<Item> CRYONITE_STEAK = ITEMS.register("cryonite_steak",
+            () -> new Item(new Item.Properties().food(CRYONITE_STEAK_PROPS)));
+
+    public static final RegistryObject<Item> CRYONITE_GAPPLE = ITEMS.register("cryonite_gapple",
+            () -> new Item(new Item.Properties().food(CRYONITE_GAPPLE_PROPS)));
 
 
 

@@ -45,6 +45,9 @@
 
   "block.firstmod.evergreen_sapling": "Evergreen Sapling",
   "item.firstmod.coca_colina": "Coca Colina",
-  "item.firstmod.c17h21no4_seeds": "Coca Colina Seeds"
+  "item.firstmod.c17h21no4_seeds": "Coca Colina Seeds",
+
+  "item.firstmod.cryonite_steak" : "Cryonite Steak",
+  "item.firstmod.cryonite_gapple" : "Cryonite Gapple"
 
 }
