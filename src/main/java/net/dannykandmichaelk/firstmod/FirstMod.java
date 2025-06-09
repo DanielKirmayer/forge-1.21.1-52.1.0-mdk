@@ -10,8 +10,11 @@ import net.dannykandmichaelk.firstmod.entity.client.MrDasRenderer;
 import net.dannykandmichaelk.firstmod.entity.client.WerewolfRenderer;
 import net.dannykandmichaelk.firstmod.item.ModCreativeModeTabs;
 import net.dannykandmichaelk.firstmod.item.ModItems;
+import net.dannykandmichaelk.firstmod.screen.ModMenuTypes;
+import net.dannykandmichaelk.firstmod.screen.custom.CryoniteWorkbenchScreen;
 import net.dannykandmichaelk.firstmod.sound.ModSounds;
 import net.dannykandmichaelk.firstmod.villager.ModVillagers;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -50,6 +53,7 @@ public class FirstMod {
         ModEnchantmentEffects.register(modEventBus);
         ModEffects.MOB_EFFECTS.register(modEventBus);
         ModVillagers.register(modEventBus);
+
 
         // Register the item to a creative tab
 //        modEventBus.addListener(this::addCreative);
@@ -94,6 +98,7 @@ public class FirstMod {
             EntityRenderers.register(ModEntities.MRDAS.get(), MrDasRenderer::new);
             EntityRenderers.register(ModEntities.WEREWOLF.get(), WerewolfRenderer::new);
             EntityRenderers.register(ModEntities.MJOLNIR.get(), MjolnirProjectileRenderer::new);
+            MenuScreens.register(ModMenuTypes.CRYONITE_WORKBENCH_MENU.get(), CryoniteWorkbenchScreen::new);
 
         }
     }
