@@ -3,7 +3,7 @@ package net.dannykandmichaelk.firstmod.screen.custom;
 
 
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
-import net.dannykandmichaelk.firstmod.entity.custom.CryoniteWorkbenchBlockEntity;
+import net.dannykandmichaelk.firstmod.block.entity.custom.CryoniteWorkbenchBlockEntity;
 import net.dannykandmichaelk.firstmod.screen.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;

@@ -1,6 +1,5 @@
-package net.dannykandmichaelk.firstmod.entity.custom;
+package net.dannykandmichaelk.firstmod.block.entity.custom;
 
-import net.dannykandmichaelk.firstmod.block.ModBlocks;
 import net.dannykandmichaelk.firstmod.block.entity.ModBlockEntities;
 import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.dannykandmichaelk.firstmod.screen.custom.CryoniteWorkbenchMenu;

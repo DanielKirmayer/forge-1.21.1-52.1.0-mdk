@@ -1,6 +1,7 @@
 package net.dannykandmichaelk.firstmod.block;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
+import net.dannykandmichaelk.firstmod.block.custom.CryoniteWorkbenchBlock;
 import net.dannykandmichaelk.firstmod.block.custom.ModC17H21NO4;
 import net.dannykandmichaelk.firstmod.block.custom.ModFlammableRotatedPillarBlock;
 import net.dannykandmichaelk.firstmod.item.ModItems;
@@ -115,8 +116,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.14f)));
 
     public static RegistryObject<Block> CRYONITE_WORKBENCH = registerBlock("cryonite_workbench", () ->
-            new Block(BlockBehaviour.Properties.of().strength(5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.GILDED_BLACKSTONE).explosionResistance(10000f)));
+            new CryoniteWorkbenchBlock(BlockBehaviour.Properties.of()));
 
 
 

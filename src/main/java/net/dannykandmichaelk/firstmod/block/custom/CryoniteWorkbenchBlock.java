@@ -2,7 +2,7 @@ package net.dannykandmichaelk.firstmod.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.dannykandmichaelk.firstmod.block.entity.ModBlockEntities;
-import net.dannykandmichaelk.firstmod.entity.custom.CryoniteWorkbenchBlockEntity;
+import net.dannykandmichaelk.firstmod.block.entity.custom.CryoniteWorkbenchBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -21,8 +21,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.Nullable;
-
-import static net.minecraft.world.level.block.state.BlockBehaviour.simpleCodec;
 
 public class CryoniteWorkbenchBlock extends BaseEntityBlock {
     public static final MapCodec<CryoniteWorkbenchBlock> CODEC = simpleCodec(CryoniteWorkbenchBlock::new);
@@ -65,7 +63,7 @@ public class CryoniteWorkbenchBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof CryoniteWorkbenchBlockEntity CryoniteWorkbenchBlockEntity) {
-                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(CryoniteWorkbenchBlockEntity, Component.literal("Growth Chamber")), pPos);
+                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(CryoniteWorkbenchBlockEntity, Component.literal("Cryonite Workbench")), pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }

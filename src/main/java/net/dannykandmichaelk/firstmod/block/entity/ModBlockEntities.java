@@ -2,7 +2,7 @@ package net.dannykandmichaelk.firstmod.block.entity;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
-import net.dannykandmichaelk.firstmod.entity.custom.CryoniteWorkbenchBlockEntity;
+import net.dannykandmichaelk.firstmod.block.entity.custom.CryoniteWorkbenchBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
