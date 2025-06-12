@@ -1,5 +1,6 @@
 package net.dannykandmichaelk.firstmod.block.entity.custom;
 
+import net.dannykandmichaelk.firstmod.block.ModBlocks;
 import net.dannykandmichaelk.firstmod.block.entity.ModBlockEntities;
 import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.dannykandmichaelk.firstmod.screen.custom.CryoniteWorkbenchMenu;
@@ -45,7 +46,7 @@ public class CryoniteWorkbenchBlockEntity extends BlockEntity implements MenuPro
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 500;
 
     public CryoniteWorkbenchBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.CRYONITE_WORKBENCH_BE.get(), pPos, pBlockState);
@@ -140,11 +141,11 @@ public class CryoniteWorkbenchBlockEntity extends BlockEntity implements MenuPro
 
     private void resetProgress() {
         this.progress = 0;
-        this.maxProgress = 72;
+        this.maxProgress = 500;
     }
 
     private void craftItem() {
-        ItemStack output = new ItemStack(ModItems.RAW_CRYONITE.get());
+        ItemStack output = new ItemStack(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get());
 
         itemHandler.extractItem(INPUT_SLOT, 1, false);
         itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
@@ -160,10 +161,10 @@ public class CryoniteWorkbenchBlockEntity extends BlockEntity implements MenuPro
     }
 
     private boolean hasRecipe() {
-        Item input = ModItems.CRYONITE.get();
-    ItemStack output = new ItemStack(ModItems.RAW_CRYONITE.get());
+        ItemStack input = new ItemStack(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK.get());
+    ItemStack output = new ItemStack(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK.get());
 
-        return itemHandler.getStackInSlot(INPUT_SLOT).is(input) && canInsertItemIntoOutputSlot(output)
+        return itemHandler.getStackInSlot(INPUT_SLOT).is(input.getItem()) && canInsertItemIntoOutputSlot(output)
                 && canInsertAmountIntoOutputSlot(output.getCount());
     }
 

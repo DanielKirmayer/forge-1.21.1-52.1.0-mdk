@@ -1,13 +1,15 @@
-// 1.21.1	2025-06-06T18:26:53.7949956	Item Models: firstmod
+// 1.21.1	2025-06-12T10:27:14.1065959	Item Models: firstmod
 88536d54701864870aef63a15baf6da35d4f8c54 assets/firstmod/models/item/barney_disc.json
 3e0746059bab6abaaa647e013f6e9f5984739aea assets/firstmod/models/item/c17h21no4_seeds.json
 9397c589b1f6287ea73bd396c9820e1ac87f62dc assets/firstmod/models/item/coca_colina.json
 207e3b4194da1120190ac6a310837c68f463c90b assets/firstmod/models/item/cryonite.json
 58f1f43718fb5fb534d4317f404b262cf1c86e2f assets/firstmod/models/item/cryonite_boots.json
 a6625d6014725aa1510ffedfde68cb026b00f929 assets/firstmod/models/item/cryonite_chestplate.json
+5cbd91405f2af46640ab58d3848f274009f25199 assets/firstmod/models/item/cryonite_gapple.json
 60bf8c9b50f633025ab167ca54c05dfcee80f4cb assets/firstmod/models/item/cryonite_helmet.json
 00738bfaee220ef02fdd3ea9f6106cce9cda526c assets/firstmod/models/item/cryonite_leggings.json
 e7c0c4730154dc56a1bf0361b22b6137dc04fd13 assets/firstmod/models/item/cryonite_pickaxe.json
+2ecf954178b2a909ed911d25d55d0a2a847c8644 assets/firstmod/models/item/cryonite_steak.json
 f14085844423b77b438566ec987b0b206e20e653 assets/firstmod/models/item/cryonite_sword.json
 3cab687381bd734e09b5ae7c9270884d078e7ea0 assets/firstmod/models/item/evergreen_sapling.json
 a3db156416b6a200ee6d42efbfe288b1661a3ae1 assets/firstmod/models/item/kaupen_bow.json

@@ -35,7 +35,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PACKED_ICE_INFUSED_CRYONITE_BLOCK);
         blockWithItem(ModBlocks.BLUE_ICE_INFUSED_CRYONITE_BLOCK);
         blockWithItem(ModBlocks.CRYONITE_INFUSED_CRYONITE_BLOCK);
-        blockItem(ModBlocks.CRYONITE_WORKBENCH);
 
 
 
