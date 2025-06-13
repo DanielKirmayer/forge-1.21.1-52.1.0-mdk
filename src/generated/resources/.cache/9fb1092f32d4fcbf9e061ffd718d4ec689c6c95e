@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-13T10:54:35.7852975	Recipes
+// 1.21.1	2025-06-13T11:01:53.8262314	Recipes
 052387019277a8ed2f3e978459e903dd3b95fd40 data/firstmod/advancement/recipes/combat/cryonite_boots.json
 148204efcfa0c5d2f36a14f7a14e3c7162ad8a40 data/firstmod/advancement/recipes/combat/cryonite_chestplate.json
 a066ed01236790f0e59c933f024ecb2ab46db6fb data/firstmod/advancement/recipes/combat/cryonite_claymore1.json
@@ -44,7 +44,7 @@ ad81be2232f0818614eccdbd4f33f2b57846f60e data/firstmod/recipe/cryonite_sword.jso
 067b3fc0559f4fc28e95f01e494f3785303607f0 data/firstmod/recipe/ice_infused_cryonite_block.json
 29a3f89032c808a9d42fc56eb77f72575a4bdf8d data/firstmod/recipe/packed_ice_infused_cryonite_block.json
 4cded28cf811b44753242780b90f7c38c1686444 data/firstmod/recipe/shard_of_thor.json
-c399a295b77750b0be0fd67aaffe1b13698b2023 data/firstmod/recipe/thorium_upgrade_smithing_template.json
+d6704d9a756a3287194e4d5ea6bec0202e288819 data/firstmod/recipe/thorium_upgrade_smithing_template.json
 024c99a3e2acef6a0e8be370fcf27f976e3924df data/firstmod/recipe/trumpium.json
 8e2ca4b371a8bc6af55b8c73be02e94224e211f6 data/firstmod/recipe/trumpium_block.json
 c814f141266cee54c58c57c3a1d4d544069862de data/minecraft/advancement/recipes/combat/mjolnir1_smithing.json
