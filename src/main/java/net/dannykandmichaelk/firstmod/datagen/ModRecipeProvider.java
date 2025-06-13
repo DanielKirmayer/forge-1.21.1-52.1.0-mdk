@@ -170,7 +170,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .pattern("BAB")
                         .pattern("BCB")
                         .pattern("BBB")
-                        .define('A', ModItems.SHARD_OF_THOR.get())
+                        .define('A', Items.GOLD_INGOT)
                         .define('B', Blocks.OBSIDIAN)
                         .define('C', ModItems.THORIUM_UPGRADE_TEMPLATE.get())
                         .unlockedBy(getHasName(ModItems.THORIUM_UPGRADE_TEMPLATE.get()), has(ModItems.THORIUM_UPGRADE_TEMPLATE.get())).save(pRecipeOutput);
