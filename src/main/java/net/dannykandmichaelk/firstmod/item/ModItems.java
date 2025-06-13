@@ -5,6 +5,7 @@ import net.dannykandmichaelk.firstmod.block.ModBlocks;
 import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.item.custom.*;
 import net.dannykandmichaelk.firstmod.sound.ModSounds;
+import net.dannykandmichaelk.firstmod.util.ModSmithingUpgradeItemHelper;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Mob;
@@ -169,6 +170,10 @@ public class ModItems implements JukeboxSongs{
 
     public static final RegistryObject<Item> CRYONITE_GAPPLE = ITEMS.register("cryonite_gapple",
             () -> new Item(new Item.Properties().food(CRYONITE_GAPPLE_PROPS)));
+
+
+    public static final RegistryObject<Item> THORIUM_UPGRADE_TEMPLATE = ITEMS.register("thorium_upgrade_smithing_template",
+            ModSmithingUpgradeItemHelper::createCryoniteUpgradeTemplate);
 
 
 

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:egg"
+  },
+  "base": {
+    "item": "firstmod:cryonite"
+  },
+  "result": {
+    "count": 1,
+    "id": "firstmod:mjolnir1"
+  },
+  "template": {
+    "item": "firstmod:thorium_upgrade_smithing_template"
+  }
+}

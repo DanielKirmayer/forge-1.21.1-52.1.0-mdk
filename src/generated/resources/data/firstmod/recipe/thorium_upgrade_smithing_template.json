@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "firstmod:shard_of_thor"
+    },
+    "B": {
+      "item": "minecraft:obsidian"
+    },
+    "C": {
+      "item": "firstmod:thorium_upgrade_smithing_template"
+    }
+  },
+  "pattern": [
+    "BAB",
+    "BCB",
+    "BBB"
+  ],
+  "result": {
+    "count": 2,
+    "id": "firstmod:thorium_upgrade_smithing_template"
+  }
+}

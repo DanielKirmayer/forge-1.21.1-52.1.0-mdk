@@ -34,6 +34,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CRYONITE_BOOTS.get());
         basicItem(ModItems.WEAKENED_SHARD_OF_THOR.get());
         basicItem(ModItems.SHARD_OF_THOR.get());
+        basicItem(ModItems.THORIUM_UPGRADE_TEMPLATE.get());
 
         handheldItem(ModItems.CRYONITE_SWORD);
         handheldItem(ModItems.CRYONITE_PICKAXE);
@@ -46,6 +47,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BARNEY_DISC.get());
         handheldItem(ModItems.CRYONITE_STEAK);
         handheldItem(ModItems.CRYONITE_GAPPLE);
+
 
 
 

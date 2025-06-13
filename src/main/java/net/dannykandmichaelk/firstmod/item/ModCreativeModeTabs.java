@@ -38,6 +38,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CRYONITE_WORKBENCH.get());
                         output.accept(ModBlocks.DEEPSLATE_CRYONITE_ORE.get());
                         output.accept(ModBlocks.CRYONITE_ORE.get());
+                        output.accept(ModItems.THORIUM_UPGRADE_TEMPLATE.get());
 
 
 

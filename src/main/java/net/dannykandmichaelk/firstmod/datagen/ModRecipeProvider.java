@@ -6,7 +6,9 @@ import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -161,6 +163,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Blocks.CRAFTING_TABLE)
                 .define('B', ModBlocks.CRYONITE_BLOCK.get());
 
+        cryoniteSmithing(pRecipeOutput, ModItems.CRYONITE.get(), RecipeCategory.COMBAT, ModItems.MJOLNIR.get());
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.THORIUM_UPGRADE_TEMPLATE.get(), 2)
+                        .pattern("BAB")
+                        .pattern("BCB")
+                        .pattern("BBB")
+                        .define('A', ModItems.SHARD_OF_THOR.get())
+                        .define('B', Blocks.OBSIDIAN)
+                        .define('C', ModItems.THORIUM_UPGRADE_TEMPLATE.get())
+                        .unlockedBy(getHasName(ModItems.THORIUM_UPGRADE_TEMPLATE.get()), has(ModItems.THORIUM_UPGRADE_TEMPLATE.get())).save(pRecipeOutput);
+
 
 
 
@@ -201,5 +215,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(recipeOutput, FirstMod.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
+
+    protected static void cryoniteSmithing(RecipeOutput pRecipeOutput, Item pIngredientItem, RecipeCategory pCategory, Item pResultItem) {
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(ModItems.THORIUM_UPGRADE_TEMPLATE.get()), Ingredient.of(pIngredientItem), Ingredient.of(Items.EGG), pCategory, pResultItem
+                )
+                .unlocks("has_thorium_upgrade_smithing_template", has(ModItems.THORIUM_UPGRADE_TEMPLATE.get()))
+                .save(pRecipeOutput, getItemName(pResultItem) + "_smithing");
     }
 }
